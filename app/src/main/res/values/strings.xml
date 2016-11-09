@@ -1,0 +1,20 @@
+<resources>
+    <!--String form aplication -->
+    <string name="app_name">FunSys</string>
+    <string name="title_activity_formularios">FORMULARIOS</string>
+    <string name="title_activity_menu">MENU</string>
+    <string name="title_activity_form">FORMULARIO</string>
+    <string name="title_activity_list">LISTA</string>
+
+
+
+    <!-- String for Permissions -->
+    <string name="INTERNET_label">Internet</string>
+    <string name="INTERNET_description">Permite a las aplicaciones abrir sockets de red</string>
+    <string name="ACCESS_WIFI_STATE_label">Acceso a Wifi</string>
+    <string name="ACCESS_WIFI_STATE_description">Permite a las aplicaciones acceder a la información acerca de las redes Wi-Fi</string>
+    <string name="SEND_SMS_label">Envia de SMS</string>
+    <string name="SEND_SMS_description">Permite que una aplicación para enviar mensajes SMS.</string>
+    <string name="BROADCAST_SMS_label">Recibir de SMS</string>
+    <string name="BROADCAST_SMS_description">Permite que una aplicación emita una notificación de recepción de SMS.</string>
+</resources>

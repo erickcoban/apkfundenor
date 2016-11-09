@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Formulario General Mi Chosita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center_horizontal"
+        android:textStyle="normal|bold"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Tipo de Pared"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:paddingTop="10dp" />
+
+            <RadioButton
+                android:text="Bloc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton8" />
+
+            <RadioButton
+                android:text="Nylon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton6" />
+
+            <RadioButton
+                android:text="Madera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton7" />
+
+            <RadioButton
+                android:text="Mixto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton9" />
+
+            <TextView
+                android:text="Tipo Techo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:paddingTop="10dp" />
+
+            <RadioButton
+                android:text="Lamina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton10" />
+
+            <RadioButton
+                android:text="Nylon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton11" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:text="Tiene Acceso a Agua"
+                android:paddingTop="10dp" />
+
+            <RadioButton
+                android:text="No"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton" />
+
+            <RadioButton
+                android:text="Si"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2" />
+
+            <TextView
+                android:text="Almacena Agua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:paddingTop="10dp" />
+
+            <RadioButton
+                android:text="No"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton3" />
+
+            <RadioButton
+                android:text="Si"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton4" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

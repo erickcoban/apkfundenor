@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.subprogramamalaria.apk_fundenor">
+
+    <!--Permisos de la API -->
+    <uses-permission android:name="android.permission.INTERNET"
+        android:label="@string/INTERNET_label"
+        android:description="@string/INTERNET_description"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"
+        android:label="@string/ACCESS_WIFI_STATE_label"
+        android:description="@string/ACCESS_WIFI_STATE_description"/>
+    <uses-permission android:name="android.permission.SEND_SMS"
+        android:label="@string/SEND_SMS_label"
+        android:description="@string/SEND_SMS_description"/>
+    <uses-permission android:name="android.permission.BROADCAST_SMS"
+        android:label="@string/BROADCAST_SMS_description"
+        android:description="@string/BROADCAST_SMS_description"/>
+
+    <!--Contenido de la Aplicación Movil FunSys-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Vistas de Listados -->
+        <!--activity android:name=".lista_comunidades" /-->
+        <!--activity android:name=".lista_participantes" /-->
+
+        <!-- Formatos de Agregar Vivienda -->
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".AgregarMiembro"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".ModificarMiembro"
+            android:label="@string/title_activity_form" >
+        </activity>
+
+        <!-- Formatos de Agregar Familia -->
+        <activity
+            android:name=".MyActivityFamilia"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".AgregarFamilia"
+            android:label="@string/title_activity_form" >
+        </activity>
+
+        <!-- Formatos de Agregar Participante -->
+        <activity
+            android:name=".MyActivityParticipante"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".AgregarParticipante"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".ModificarParticipante"
+            android:label="@string/title_activity_form" >
+        </activity>
+
+        <!-- Formatos de Agregar Subparticipante -->
+        <activity
+            android:name=".MyActivitySubparticipante"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".AgregarSubparticipante"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".ModificarSubparticipante"
+            android:label="@string/title_activity_form" >
+        </activity>
+
+        <!--Listado de Menus Secundarios-->
+        <activity
+            android:name=".formularios"
+            android:label="@string/title_activity_menu" >
+        </activity>
+
+        <!--Listado de Formularios-->
+        <activity
+            android:name=".form_general_mi_chosita"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_huertos_familiares"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_etnoveterinaria"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_transformacion"
+            android:label="@string/title_activity_form" >
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
