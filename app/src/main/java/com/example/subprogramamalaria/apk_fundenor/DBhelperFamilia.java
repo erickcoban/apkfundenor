@@ -7,9 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBhelperFamilia extends SQLiteOpenHelper {
 
     // Información de la tabla
-    public static final String TABLE_MEMBER = "miembros";
-    public static final String MIEMBRO_ID = "_id";
-    public static final String MIEMBRO_NOMBRE = "nombre";
+    public static final String TABLE_FAMILIA = "familia";
+    public static final String FAMILIA_ID = "_id";
+    public static final String FAMILIA_NOMBRE = "nombre";
+    public static final String FAMILIA_VIVIENDA = "vivienda";
 
     // información del a base de datos
     static final String DB_NAME = "DBFAMILIA";
@@ -17,9 +18,10 @@ public class DBhelperFamilia extends SQLiteOpenHelper {
 
     // Información de la base de datos
     private static final String CREATE_TABLE = "create table "
-            + TABLE_MEMBER + "(" + MIEMBRO_ID
-            + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + MIEMBRO_NOMBRE + " TEXT NOT NULL);";
+            + TABLE_FAMILIA + "("
+            + FAMILIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + FAMILIA_NOMBRE + " TEXT NOT NULL, "
+            + FAMILIA_VIVIENDA + " TEXT NOT NULL);";
 
     public DBhelperFamilia(Context context) {
         super(context, DB_NAME, null,DB_VERSION);
@@ -33,7 +35,7 @@ public class DBhelperFamilia extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_MEMBER);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_FAMILIA);
         onCreate(db);
     }
 }

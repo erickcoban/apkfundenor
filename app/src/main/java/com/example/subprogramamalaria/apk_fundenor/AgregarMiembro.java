@@ -298,6 +298,7 @@ public class AgregarMiembro extends Activity implements OnClickListener {
                 //Acción en la que se almacenan los valores y reenvia al formulario de ambiente, mobiliario y accesorios
                 Intent main = new Intent(AgregarMiembro.this, MyActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                main.putExtra("usuario", username);
                 startActivity(main);
                 break;
 

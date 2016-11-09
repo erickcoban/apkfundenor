@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyActivityFamilia extends ActionBarActivity {
 
@@ -29,6 +30,10 @@ public class MyActivityFamilia extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_familia);
 
+        //Asigna el numero de la vivienda a la que pertenece
+        final String idV = getIntent().getStringExtra("miembroId");
+        final String idVivienda = idV;
+
         dbconeccion = new SQLControladorFamilia(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarFamilia);
@@ -39,6 +44,9 @@ public class MyActivityFamilia extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent iagregar = new Intent(MyActivityFamilia.this, AgregarFamilia.class);
+                //envia el id de la vivienda
+                iagregar.putExtra("miembroId", idV);
+                Toast.makeText(getApplicationContext(), "presiono " + idV, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -47,12 +55,14 @@ public class MyActivityFamilia extends ActionBarActivity {
         Cursor cursor = dbconeccion.leerDatos();
 
         String[] from = new String[] {
-                DBhelperFamilia.MIEMBRO_ID,
-                DBhelperFamilia.MIEMBRO_NOMBRE
+                DBhelperFamilia.FAMILIA_ID,
+                DBhelperFamilia.FAMILIA_NOMBRE,
+                DBhelperFamilia.FAMILIA_VIVIENDA
         };
         int[] to = new int[] {
                 R.id.miembro_id,
-                R.id.miembro_nombre
+                R.id.miembro_nombre,
+                R.id.miembro_3
         };
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(

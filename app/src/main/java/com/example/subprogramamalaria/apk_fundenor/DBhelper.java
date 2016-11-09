@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBhelper extends SQLiteOpenHelper {
 
-    // Información de la tabla
+    // Información de la tabla viviendas
     public static final String TABLE_VIVIENDA = "viviendas";
     public static final String VIVIENDA_ID = "_id";
     public static final String VIVIENDA_NOMBRE = "idVivienda";
@@ -23,10 +23,10 @@ public class DBhelper extends SQLiteOpenHelper {
     public static final String VIVIENDA_FECHA = "fecha";
 
     // información del a base de datos
-    static final String DB_NAME = "DBVIVIENDA";
+    static final String DB_NAME = "DBFUNSYS";
     static final int DB_VERSION = 1;
 
-    // Información de la base de datos
+    // Creación de la Tabla
     private static final String CREATE_TABLE = "create table "
             + TABLE_VIVIENDA + "("
             + VIVIENDA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "

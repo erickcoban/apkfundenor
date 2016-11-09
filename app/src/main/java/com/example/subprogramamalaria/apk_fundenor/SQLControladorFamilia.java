@@ -30,18 +30,20 @@ public class SQLControladorFamilia {
         dbhelper.close();
     }
 
-    public void insertarDatos(String name) {
+    public void insertarDatos(String name, String idV) {
         ContentValues cv = new ContentValues();
-        cv.put(DBhelperFamilia.MIEMBRO_NOMBRE, name);
-        database.insert(DBhelperFamilia.TABLE_MEMBER, null, cv);
+        cv.put(DBhelperFamilia.FAMILIA_NOMBRE, name);
+        cv.put(DBhelperFamilia.FAMILIA_VIVIENDA, idV);
+        database.insert(DBhelperFamilia.TABLE_FAMILIA, null, cv);
     }
 
     public Cursor leerDatos() {
         String[] todasLasColumnas = new String[] {
-                DBhelperFamilia.MIEMBRO_ID,
-                DBhelperFamilia.MIEMBRO_NOMBRE
+                DBhelperFamilia.FAMILIA_ID,
+                DBhelperFamilia.FAMILIA_NOMBRE,
+                DBhelperFamilia.FAMILIA_VIVIENDA
         };
-        Cursor c = database.query(DBhelperFamilia.TABLE_MEMBER, todasLasColumnas, null,
+        Cursor c = database.query(DBhelperFamilia.TABLE_FAMILIA, todasLasColumnas, null,
                 null, null, null, null);
         if (c != null) {
             c.moveToFirst();
@@ -51,14 +53,14 @@ public class SQLControladorFamilia {
 
     public int actualizarDatos(long memberID, String memberName) {
         ContentValues cvActualizar = new ContentValues();
-        cvActualizar.put(DBhelperFamilia.MIEMBRO_NOMBRE, memberName);
-        int i = database.update(DBhelperFamilia.TABLE_MEMBER, cvActualizar,
-                DBhelperFamilia.MIEMBRO_ID + " = " + memberID, null);
+        cvActualizar.put(DBhelperFamilia.FAMILIA_NOMBRE, memberName);
+        int i = database.update(DBhelperFamilia.TABLE_FAMILIA, cvActualizar,
+                DBhelperFamilia.FAMILIA_ID + " = " + memberID, null);
         return i;
     }
 
     public void deleteData(long memberID) {
-        database.delete(DBhelperFamilia.TABLE_MEMBER, DBhelperFamilia.MIEMBRO_ID + "="
+        database.delete(DBhelperFamilia.TABLE_FAMILIA, DBhelperFamilia.FAMILIA_ID + "="
                 + memberID, null);
     }
 }

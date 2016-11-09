@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -54,6 +55,7 @@ public class MyActivity extends ActionBarActivity {
                 Intent iagregar = new Intent(MyActivity.this, AgregarMiembro.class);
                 //envia el usuario que se logea
                 iagregar.putExtra("usuario", usuarioActual);
+                Toast.makeText(getApplicationContext(), "presiono " + usuarioActual, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -111,7 +113,7 @@ public class MyActivity extends ActionBarActivity {
                 String aux_miembroNombre = tv_miemNombre.getText().toString();
 
                 Intent modify_intent = new Intent(getApplicationContext(), MyActivityFamilia.class);
-
+                //Identificador de la vivienda
                 modify_intent.putExtra("miembroId", aux_miembroId);
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);
                 startActivity(modify_intent);
