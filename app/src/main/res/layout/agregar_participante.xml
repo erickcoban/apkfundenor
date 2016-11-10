@@ -67,7 +67,7 @@
                 android:textStyle="normal|bold" />
 
             <EditText
-                android:id="@+id/et_miembro_id"
+                android:id="@+id/nombreP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -567,10 +567,11 @@
             <DatePicker
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:id="@+id/fecha"
+                android:id="@+id/fechaRegPar"
                 android:layout_gravity="center_horizontal"
                 android:datePickerMode="spinner"
-                android:calendarViewShown="false"/>
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnAgregarId"

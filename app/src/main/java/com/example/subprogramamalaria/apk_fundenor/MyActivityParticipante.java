@@ -47,12 +47,52 @@ public class MyActivityParticipante extends ActionBarActivity {
         Cursor cursor = dbconeccion.leerDatos();
 
         String[] from = new String[] {
-                DBhelperParticipante.MIEMBRO_ID,
-                DBhelperParticipante.MIEMBRO_NOMBRE
+                DBhelperParticipante.PARTICIPANTE_ID,
+                DBhelperParticipante.PARTICIPANTE_NOMBRE1,
+                DBhelperParticipante.PARTICIPANTE_NOMBRE2,
+                DBhelperParticipante.PARTICIPANTE_NOMBRE3,
+                DBhelperParticipante.PARTICIPANTE_APELLIDO1,
+                DBhelperParticipante.PARTICIPANTE_APELLIDO2,
+                DBhelperParticipante.PARTICIPANTE_APELLIDOC,
+                DBhelperParticipante.PARTICIPANTE_GENERO,
+                DBhelperParticipante.PARTICIPANTE_FECHANAC,
+                DBhelperParticipante.PARTICIPANTE_CUI,
+                DBhelperParticipante.PARTICIPANTE_GRADOACA,
+                DBhelperParticipante.PARTICIPANTE_ESTADOCIV,
+                DBhelperParticipante.PARTICIPANTE_CARGOCOM,
+                DBhelperParticipante.PARTICIPANTE_IDIOMA,
+                DBhelperParticipante.PARTICIPANTE_OFICIO,
+                DBhelperParticipante.PARTICIPANTE_RELIGION,
+                DBhelperParticipante.PARTICIPANTE_GRUPO,
+                DBhelperParticipante.PARTICIPANTE_TENECIAT,
+                DBhelperParticipante.PARTICIPANTE_CERTEZA,
+                DBhelperParticipante.PARTICIPANTE_MEDIDAT,
+                DBhelperParticipante.PARTICIPANTE_INGRESOE,
+                DBhelperParticipante.PARTICIPANTE_FECHAREG
         };
         int[] to = new int[] {
                 R.id.miembro_id,
-                R.id.miembro_nombre
+                R.id.miembro_nombre,
+                R.id.miembro_3,
+                R.id.miembro_4,
+                R.id.miembro_5,
+                R.id.miembro_6,
+                R.id.miembro_7,
+                R.id.miembro_8,
+                R.id.miembro_9,
+                R.id.miembro_10,
+                R.id.miembro_11,
+                R.id.miembro_12,
+                R.id.miembro_13,
+                R.id.miembro_14,
+                R.id.miembro_15,
+                R.id.miembro_16,
+                R.id.miembro_17,
+                R.id.miembro_18,
+                R.id.miembro_19,
+                R.id.miembro_20,
+                R.id.miembro_21
+
         };
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
