@@ -32,7 +32,6 @@ public class MyActivityFamilia extends ActionBarActivity {
 
         //Asigna el numero de la vivienda a la que pertenece
         final String idV = getIntent().getStringExtra("miembroId");
-        final String idVivienda = idV;
 
         dbconeccion = new SQLControladorFamilia(this);
         dbconeccion.abrirBaseDeDatos();
@@ -46,7 +45,7 @@ public class MyActivityFamilia extends ActionBarActivity {
                 Intent iagregar = new Intent(MyActivityFamilia.this, AgregarFamilia.class);
                 //envia el id de la vivienda
                 iagregar.putExtra("miembroId", idV);
-                Toast.makeText(getApplicationContext(), "presiono " + idV, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "envia " + idV, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });

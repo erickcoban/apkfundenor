@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyActivityParticipante extends ActionBarActivity {
 
@@ -29,6 +30,9 @@ public class MyActivityParticipante extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_participante);
 
+        //Asigna el numero de la vivienda a la que pertenece
+        final String idFam = getIntent().getStringExtra("idFam");
+
         dbconeccion = new SQLControladorParticipante(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarParticipante);
@@ -39,6 +43,8 @@ public class MyActivityParticipante extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent iagregar = new Intent(MyActivityParticipante.this, AgregarParticipante.class);
+                iagregar.putExtra("idFam", idFam);
+                Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -48,6 +54,7 @@ public class MyActivityParticipante extends ActionBarActivity {
 
         String[] from = new String[] {
                 DBhelperParticipante.PARTICIPANTE_ID,
+                DBhelperParticipante.PARTICIPANTE_IDFAMILIA,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE1,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE2,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE3,
@@ -59,6 +66,7 @@ public class MyActivityParticipante extends ActionBarActivity {
                 DBhelperParticipante.PARTICIPANTE_CUI,
                 DBhelperParticipante.PARTICIPANTE_GRADOACA,
                 DBhelperParticipante.PARTICIPANTE_ESTADOCIV,
+                DBhelperParticipante.PARTICIPANTE_TELEFONO,
                 DBhelperParticipante.PARTICIPANTE_CARGOCOM,
                 DBhelperParticipante.PARTICIPANTE_IDIOMA,
                 DBhelperParticipante.PARTICIPANTE_OFICIO,
@@ -113,7 +121,8 @@ public class MyActivityParticipante extends ActionBarActivity {
                 String aux_miembroNombre = tv_miemNombre.getText().toString();
 
                 Intent modify_intent = new Intent(getApplicationContext(), MyActivitySubparticipante.class);
-                modify_intent.putExtra("miembroId", aux_miembroId);
+                modify_intent.putExtra("idPart", aux_miembroId);
+                Toast.makeText(getApplicationContext(), "envia " + aux_miembroId, Toast.LENGTH_SHORT).show();
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);
                 startActivity(modify_intent);
             }

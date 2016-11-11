@@ -31,7 +31,7 @@ public class SQLControlador {
     }
 
     public void insertarDatos(String numVivienda, String idLocalidad, String user, String paredVivienda, String techoVivienda,
-                              String tieneDivision, String tipoAgua, String tipoAlmacen, String otroAlmancen, String tipoPurificacion,
+                              String pisoVivienda, String tieneDivision, String tipoAgua, String tipoAlmacen, String tipoPurificacion,
                               String estadoAsig, String fecha ) {
         ContentValues cv = new ContentValues();
         cv.put(DBhelper.VIVIENDA_NOMBRE, numVivienda);
@@ -39,10 +39,10 @@ public class SQLControlador {
         cv.put(DBhelper.VIVIENDA_USER, user);
         cv.put(DBhelper.VIVIENDA_PARED, paredVivienda);
         cv.put(DBhelper.VIVIENDA_TECHO, techoVivienda);
+        cv.put(DBhelper.VIVIENDA_PISO, pisoVivienda);
         cv.put(DBhelper.VIVIENDA_DIVISION, tieneDivision);
         cv.put(DBhelper.VIVIENDA_TIPOAGUA, tipoAgua);
         cv.put(DBhelper.VIVIENDA_TIPOALMACENAGUA, tipoAlmacen);
-        cv.put(DBhelper.VIVIENDA_OTROALMACEN, otroAlmancen);
         cv.put(DBhelper.VIVIENDA_PURIFICACION, tipoPurificacion);
         cv.put(DBhelper.VIVIENDA_ESTADO, estadoAsig);
         cv.put(DBhelper.VIVIENDA_FECHA, fecha);
@@ -57,10 +57,10 @@ public class SQLControlador {
                 DBhelper.VIVIENDA_USER,
                 DBhelper.VIVIENDA_PARED,
                 DBhelper.VIVIENDA_TECHO,
+                DBhelper.VIVIENDA_PISO,
                 DBhelper.VIVIENDA_DIVISION,
                 DBhelper.VIVIENDA_TIPOAGUA,
                 DBhelper.VIVIENDA_TIPOALMACENAGUA,
-                DBhelper.VIVIENDA_OTROALMACEN,
                 DBhelper.VIVIENDA_PURIFICACION,
                 DBhelper.VIVIENDA_ESTADO,
                 DBhelper.VIVIENDA_FECHA

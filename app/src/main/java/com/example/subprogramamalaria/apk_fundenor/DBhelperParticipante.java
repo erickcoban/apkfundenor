@@ -9,6 +9,7 @@ public class DBhelperParticipante extends SQLiteOpenHelper {
     // Información de la tabla
     public static final String TABLE_PARTICIPANTE = "participantes";
     public static final String PARTICIPANTE_ID = "_id";
+    public static final String PARTICIPANTE_IDFAMILIA = "IDFAMILIA";
     public static final String PARTICIPANTE_NOMBRE1 = "nombre1";
     public static final String PARTICIPANTE_NOMBRE2 = "nombre2";
     public static final String PARTICIPANTE_NOMBRE3 = "nombre3";
@@ -20,6 +21,7 @@ public class DBhelperParticipante extends SQLiteOpenHelper {
     public static final String PARTICIPANTE_CUI = "cui";
     public static final String PARTICIPANTE_GRADOACA = "gradoAcademico";
     public static final String PARTICIPANTE_ESTADOCIV = "estadoCivil";
+    public static final String PARTICIPANTE_TELEFONO = "telefono";
     public static final String PARTICIPANTE_CARGOCOM = "cargoComunitarios";
     public static final String PARTICIPANTE_IDIOMA = "idioma";
     public static final String PARTICIPANTE_OFICIO = "oficio";
@@ -39,6 +41,7 @@ public class DBhelperParticipante extends SQLiteOpenHelper {
     private static final String CREATE_TABLE = "create table "
             + TABLE_PARTICIPANTE + "("
             + PARTICIPANTE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + PARTICIPANTE_IDFAMILIA + " TEXT NOT NULL, "
             + PARTICIPANTE_NOMBRE1 + " TEXT NOT NULL, "
             + PARTICIPANTE_NOMBRE2 + " TEXT, "
             + PARTICIPANTE_NOMBRE3 + " TEXT, "
@@ -50,6 +53,7 @@ public class DBhelperParticipante extends SQLiteOpenHelper {
             + PARTICIPANTE_CUI + " TEXT NOT NULL, "
             + PARTICIPANTE_GRADOACA + " TEXT NOT NULL, "
             + PARTICIPANTE_ESTADOCIV + " TEXT NOT NULL, "
+            + PARTICIPANTE_TELEFONO + " TEXT, "
             + PARTICIPANTE_CARGOCOM + " TEXT NOT NULL, "
             + PARTICIPANTE_IDIOMA + " TEXT NOT NULL, "
             + PARTICIPANTE_OFICIO + " TEXT NOT NULL, "

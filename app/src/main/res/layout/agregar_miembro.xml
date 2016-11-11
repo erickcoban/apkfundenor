@@ -187,6 +187,54 @@
             </RadioGroup>
 
             <TextView
+                android:text="Seleccione el tipo de piso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tipo_piso">
+
+                <RadioButton
+                    android:text="Tierra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_tierra"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Cemento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_cemento"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Piedras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_piedras"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Arena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_arena"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
                 android:text="Cuenta con Divisiones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

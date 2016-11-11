@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class AgregarParticipante extends Activity implements OnClickListener {
-    EditText n1P, n2P, n3P, a1P, a2P, aCP, cuiP, otroO, otraRP, grupoP, extTP, ingresoP;
+    EditText n1P, n2P, n3P, a1P, a2P, aCP, cuiP, otroO, otraRP, grupoP, extTP, ingresoP, telP;
     Button btnAgregar;
     DatePicker fechaNac, fechaRegPar;
     String generoPar, gradoPar, eCivilPar, cargoPar, idiomaPar, oficioPar, religionPar,
@@ -38,6 +38,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         a2P = (EditText)findViewById(R.id.apellidoP2);
         aCP = (EditText)findViewById(R.id.apellidoP3);
         cuiP = (EditText)findViewById(R.id.cui);
+        telP = (EditText)findViewById(R.id.telefonoP);
         otroO = (EditText)findViewById(R.id.otroOficio);
         otraRP = (EditText)findViewById(R.id.otraReligion);
         grupoP = (EditText)findViewById(R.id.grupoParticipa);
@@ -326,6 +327,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         switch (v.getId()) {
             //Guarda los datos en la tabla
             case R.id.btnAgregarId:
+                String idFamilia = getIntent().getStringExtra("idFam");
                 String nombre1P = n1P.getText().toString();
                 String nombre2P = n2P.getText().toString();
                 String nombre3P = n3P.getText().toString();
@@ -337,6 +339,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
                 String dpiP = cuiP.getText().toString();
                 String gradoAcade = gradoPar;
                 String estadoCivil = eCivilPar;
+                String telefonoP = telP.getText().toString();
                 String cargoComu = cargoPar;
                 String idiomPart =idiomaPar;
                 String oficioPart = oficioPar;
@@ -348,9 +351,12 @@ public class AgregarParticipante extends Activity implements OnClickListener {
                 String ingresoEcono = ingresoP.getText().toString();
                 String fechaRegPart = fechaRegPar.getYear()+"-"+(fechaRegPar.getMonth()+1)+"-"+fechaRegPar.getDayOfMonth();
 
-                dbconeccion.insertarDatos(nombre1P, nombre2P, nombre3P, apellido1P, apellido2P, apellidoCP, generoP, fechaNaci, dpiP, gradoAcade, estadoCivil, cargoComu, idiomPart, oficioPart, religionPart, grupoPart, terrenoPart, certezaJPart, extensionTPart, ingresoEcono, fechaRegPart);
+                dbconeccion.insertarDatos(idFamilia, nombre1P, nombre2P, nombre3P, apellido1P, apellido2P, apellidoCP, generoP, fechaNaci,
+                                          dpiP, gradoAcade, estadoCivil, telefonoP, cargoComu, idiomPart, oficioPart, religionPart, grupoPart,
+                                          terrenoPart, certezaJPart, extensionTPart, ingresoEcono, fechaRegPart);
                 Intent main = new Intent(AgregarParticipante.this, MyActivityParticipante.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                main.putExtra("idFam", idFamilia);
                 startActivity(main);
                 break;
 

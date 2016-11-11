@@ -245,6 +245,14 @@
 
             </RadioGroup>
 
+            <EditText
+                android:id="@+id/telefonoP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Escriba el numero de telefono"></EditText>
+
             <TextView
                 android:text="Seleccione el Cargo Comunitarios"
                 android:layout_width="match_parent"
@@ -554,15 +562,6 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="Escriba el ingreso economico"/>
-
-            <TextView
-                android:text="Seleccione Fecha de Ingreso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView13"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
 
             <DatePicker
                 android:layout_width="wrap_content"

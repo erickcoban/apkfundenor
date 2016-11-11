@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyActivitySubparticipante extends ActionBarActivity {
 
@@ -29,6 +30,9 @@ public class MyActivitySubparticipante extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_subparticipante);
 
+        //Asigna el id del participante a la que pertenece
+        final String idPart = getIntent().getStringExtra("idPart");
+
         dbconeccion = new SQLControladorSubparticipante(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarSubparticipante);
@@ -39,6 +43,8 @@ public class MyActivitySubparticipante extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent iagregar = new Intent(MyActivitySubparticipante.this, AgregarSubparticipante.class);
+                iagregar.putExtra("idPart",idPart);
+                Toast.makeText(getApplicationContext(), "envia " + idPart, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -47,8 +53,31 @@ public class MyActivitySubparticipante extends ActionBarActivity {
         Cursor cursor = dbconeccion.leerDatos();
 
         String[] from = new String[] {
-                DBhelperSubparticipante.MIEMBRO_ID,
-                DBhelperSubparticipante.MIEMBRO_NOMBRE
+                DBhelperSubparticipante.SUBPARTICIPANTE_ID,
+                DBhelperSubparticipante.SUBPARTICIPANTE_IDPART,
+                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE1,
+                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE2,
+                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE3,
+                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDO1,
+                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDO2,
+                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDOC,
+                DBhelperSubparticipante.SUBPARTICIPANTE_GENERO,
+                DBhelperSubparticipante.SUBPARTICIPANTE_CONSANGUINIDAD,
+                DBhelperSubparticipante.SUBPARTICIPANTE_FECHANAC,
+                DBhelperSubparticipante.SUBPARTICIPANTE_TALLA,
+                DBhelperSubparticipante.SUBPARTICIPANTE_PESO,
+                DBhelperSubparticipante.SUBPARTICIPANTE_DESNUTICION,
+                DBhelperSubparticipante.SUBPARTICIPANTE_CUI,
+                DBhelperSubparticipante.SUBPARTICIPANTE_GRADOACA,
+                DBhelperSubparticipante.SUBPARTICIPANTE_ESTADOCIV,
+                DBhelperSubparticipante.SUBPARTICIPANTE_TELEFONO,
+                DBhelperSubparticipante.SUBPARTICIPANTE_CARGOCOM,
+                DBhelperSubparticipante.SUBPARTICIPANTE_IDIOMA,
+                DBhelperSubparticipante.SUBPARTICIPANTE_OFICIO,
+                DBhelperSubparticipante.SUBPARTICIPANTE_RELIGION,
+                DBhelperSubparticipante.SUBPARTICIPANTE_GRUPO,
+                DBhelperSubparticipante.SUBPARTICIPANTE_INGRESOE,
+                DBhelperSubparticipante.SUBPARTICIPANTE_FECHAREG
         };
         int[] to = new int[] {
                 R.id.miembro_id,

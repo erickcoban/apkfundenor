@@ -55,7 +55,7 @@ public class MyActivity extends ActionBarActivity {
                 Intent iagregar = new Intent(MyActivity.this, AgregarMiembro.class);
                 //envia el usuario que se logea
                 iagregar.putExtra("usuario", usuarioActual);
-                Toast.makeText(getApplicationContext(), "presiono " + usuarioActual, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "envia " + usuarioActual, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -70,10 +70,10 @@ public class MyActivity extends ActionBarActivity {
                 DBhelper.VIVIENDA_USER,
                 DBhelper.VIVIENDA_PARED,
                 DBhelper.VIVIENDA_TECHO,
+                DBhelper.VIVIENDA_PISO,
                 DBhelper.VIVIENDA_DIVISION,
                 DBhelper.VIVIENDA_TIPOAGUA,
                 DBhelper.VIVIENDA_TIPOALMACENAGUA,
-                DBhelper.VIVIENDA_OTROALMACEN,
                 DBhelper.VIVIENDA_PURIFICACION,
                 DBhelper.VIVIENDA_ESTADO,
                 DBhelper.VIVIENDA_FECHA

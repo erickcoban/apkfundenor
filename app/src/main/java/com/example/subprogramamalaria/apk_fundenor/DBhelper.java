@@ -14,10 +14,10 @@ public class DBhelper extends SQLiteOpenHelper {
     public static final String VIVIENDA_USER = "userTecnico";
     public static final String VIVIENDA_PARED = "paredVivienda";
     public static final String VIVIENDA_TECHO = "techoVivienda";
+    public static final String VIVIENDA_PISO = "pisoVivienda";
     public static final String VIVIENDA_DIVISION = "tieneDivision";
     public static final String VIVIENDA_TIPOAGUA = "tipoAgua";
     public static final String VIVIENDA_TIPOALMACENAGUA = "almacenAgua";
-    public static final String VIVIENDA_OTROALMACEN = "otroAlmancen";
     public static final String VIVIENDA_PURIFICACION = "tipoPurificacion";
     public static final String VIVIENDA_ESTADO = "estadoAsignacion";
     public static final String VIVIENDA_FECHA = "fecha";
@@ -35,10 +35,10 @@ public class DBhelper extends SQLiteOpenHelper {
             + VIVIENDA_USER + " TEXT NOT NULL, "
             + VIVIENDA_PARED + " TEXT NOT NULL, "
             + VIVIENDA_TECHO + " TEXT NOT NULL, "
+            + VIVIENDA_PISO + " TEXT NOT NULL, "
             + VIVIENDA_DIVISION + " TEXT NOT NULL, "
             + VIVIENDA_TIPOAGUA + " TEXT NOT NULL, "
             + VIVIENDA_TIPOALMACENAGUA + " TEXT NOT NULL, "
-            + VIVIENDA_OTROALMACEN + " TEXT, "
             + VIVIENDA_PURIFICACION + " TEXT NOT NULL, "
             + VIVIENDA_ESTADO + " TEXT NOT NULL, "
             + VIVIENDA_FECHA + " TEXT NOT NULL);";

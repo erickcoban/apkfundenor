@@ -18,10 +18,10 @@ import android.widget.RadioButton;
 public class AgregarMiembro extends Activity implements OnClickListener {
     //Declaración de variables para almacenar en la base de datos
     DatePicker fechaVivienda;
-    EditText numeroVivienda, otroTipo;
+    EditText numeroVivienda;
     Button btnAgregar;
     SQLControlador dbconeccion;
-    String paredV, techoV, tieneD, accesoAgua, almacenAgua, tecnicaP;
+    String paredV, techoV, tieneD, accesoAgua, almacenAgua, tecnicaP, pisoV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +126,35 @@ public class AgregarMiembro extends Activity implements OnClickListener {
         rb_malla.setOnClickListener(list_techoVivienda);
         rb_sin_techo.setOnClickListener(list_techoVivienda);
 
+        //Almacena la selección del Radio button del tipo de piso
+        RadioButton rb_tierra = (RadioButton)findViewById(R.id.rb_tierra);
+        RadioButton rb_cemento = (RadioButton)findViewById(R.id.rb_cemento);
+        RadioButton rb_piedras = (RadioButton)findViewById(R.id.rb_piedras);
+        RadioButton rb_arena = (RadioButton)findViewById(R.id.rb_arena);
+        View.OnClickListener list_pisoVivienda = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch(view.getId()) {
+                    case R.id.rb_tierra:
+                        pisoV = "tierra";
+                        break;
+                    case R.id.rb_cemento:
+                        pisoV = "cemento";
+                        break;
+                    case R.id.rb_piedras:
+                        pisoV = "piedras";
+                        break;
+                    case R.id.rb_arena:
+                        pisoV = "arena";
+                        break;
+                }
+            }
+        };
+        rb_tierra.setOnClickListener(list_pisoVivienda);
+        rb_cemento.setOnClickListener(list_pisoVivienda);
+        rb_piedras.setOnClickListener(list_pisoVivienda);
+        rb_arena.setOnClickListener(list_pisoVivienda);
+
         //Almacena la selección del Radio button cuenta con divisiones
         RadioButton rb_no = (RadioButton)findViewById(R.id.rb_si);
         RadioButton rb_si = (RadioButton)findViewById(R.id.rb_no);
@@ -217,7 +246,7 @@ public class AgregarMiembro extends Activity implements OnClickListener {
                         otroTipoAlmacen.setVisibility(View.GONE);
                         break;
                     case R.id.rb_otro:
-                        almacenAgua = "otro";
+                        almacenAgua = otroTipoAlmacen.getText().toString();
                         otroTipoAlmacen.setVisibility(View.VISIBLE);
                         break;
                 }
@@ -229,9 +258,6 @@ public class AgregarMiembro extends Activity implements OnClickListener {
         rb_botella.setOnClickListener(list_tipoAlmacen);
         rb_tanque.setOnClickListener(list_tipoAlmacen);
         rb_otro.setOnClickListener(list_tipoAlmacen);
-
-        //Almacena el otro tipo de guardar el agua
-        otroTipo = (EditText) findViewById(R.id.otroTipoAlmacen);
 
         //Almacena la selección del Radio button técnica de purificación
         RadioButton rb_clorada = (RadioButton)findViewById(R.id.rb_clorada);
@@ -284,16 +310,16 @@ public class AgregarMiembro extends Activity implements OnClickListener {
                 String username = getIntent().getStringExtra("usuario");
                 String paredVivienda = paredV;
                 String techoVivienda = techoV;
+                String pisoVivienda = pisoV;
                 String tieneDivision = tieneD;
                 String tipoAgua = accesoAgua;
                 String tipoAlmacen = almacenAgua;
-                String otroAlmacen = otroTipo.getText().toString();
                 String tipoPur = tecnicaP;
                 String estadoAct = "ACTIVO";
                 String fecha = fechaVivienda.getYear()+"-"+(fechaVivienda.getMonth()+1)+"-"+fechaVivienda.getDayOfMonth();
 
                 //Metodo de insercción a la base de datos
-                dbconeccion.insertarDatos(numVivienda, idLocal, username, paredVivienda, techoVivienda, tieneDivision, tipoAgua, tipoAlmacen, otroAlmacen, tipoPur, estadoAct, fecha);
+                dbconeccion.insertarDatos(numVivienda, idLocal, username, paredVivienda, techoVivienda, pisoVivienda, tieneDivision, tipoAgua, tipoAlmacen, tipoPur, estadoAct, fecha);
 
                 //Acción en la que se almacenan los valores y reenvia al formulario de ambiente, mobiliario y accesorios
                 Intent main = new Intent(AgregarMiembro.this, MyActivity.class)

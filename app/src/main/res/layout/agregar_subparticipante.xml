@@ -24,39 +24,7 @@
             android:scrollbarSize="12dp">
 
             <TextView
-                android:text="Seleccione Genero"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/genero">
-
-                <RadioButton
-                    android:text="Masculino"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_masculino"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Femenino"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_femenino"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:text="Seleccione Genero"
+                android:text="Seleccione grado de Consanguinidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14"
@@ -78,18 +46,58 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Hijo"
+                    android:text="Hijo / Hija"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_Hijo"
+                    android:id="@+id/rb_hijo_a"
                     android:layout_weight="1"
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Hija"
+                    android:text="Otro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_Hija"
+                    android:id="@+id/rb_otroCons"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/otroConsan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique su consanguinidad"
+                android:visibility="gone"/>
+
+            <TextView
+                android:text="Seleccione Genero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/generoSP">
+
+                <RadioButton
+                    android:text="Masculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_masculinoSP"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Femenino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_femeninoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -104,42 +112,42 @@
                 android:textStyle="normal|bold" />
 
             <EditText
-                android:id="@+id/et_miembro_id"
+                android:id="@+id/nombreSP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Primer Nombre"></EditText>
+                android:hint="Primer Nombre"/>
 
             <EditText
-                android:id="@+id/nombreP2"
+                android:id="@+id/nombreSP2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Segundo Nombre" />
 
             <EditText
-                android:id="@+id/nombreP3"
+                android:id="@+id/nombreSP3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Tercer Nombre"/>
 
             <EditText
-                android:id="@+id/apellidoP1"
+                android:id="@+id/apellidoSP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Primer Apellido"/>
 
             <EditText
-                android:id="@+id/apellidoP2"
+                android:id="@+id/apellidoSP2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Segundo Apellido"/>
 
             <EditText
-                android:id="@+id/apellidoP3"
+                android:id="@+id/apellidoSP3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -158,13 +166,131 @@
             <DatePicker
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:id="@+id/fechaNacimiento"
+                android:id="@+id/fechaNacimientoSP"
                 android:layout_gravity="center_horizontal"
                 android:datePickerMode="spinner"
                 android:calendarViewShown="false"/>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/LinearDes"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/tallaSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Escriba la talla del niño (a)"/>
+
+                <EditText
+                    android:id="@+id/pesoSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Escriba el peso del niño (a)"/>
+
+                <TextView
+                    android:text="Seleccione el tipo de desnutrición del niño (a)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDesnutricion"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/gradoDesnutricion">
+
+                    <RadioButton
+                        android:text="Cronica Moderada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_cronica_moderada"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Cronica Severa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_cronica_severa"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Aguda Moderada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_aguda_moderada"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Aguda Severa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_aguda_severa"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Kwuashiorkol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_kwuashiorkol"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Marasmo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_marasmo"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Edema 1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_edema1"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Edema 2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_edema2"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Edema 3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_edema3"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_ningunoSP"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
             <EditText
-                android:id="@+id/cui"
+                android:id="@+id/cuiSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -182,13 +308,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/gradoAcademico">
+                android:id="@+id/gradoAcademicoSP">
 
                 <RadioButton
                     android:text="Preprimaria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_preprimaria"
+                    android:id="@+id/rb_preprimariaSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -196,7 +322,7 @@
                     android:text="Primaria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_primaria"
+                    android:id="@+id/rb_primariaSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -204,7 +330,7 @@
                     android:text="Basico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_basico"
+                    android:id="@+id/rb_basicoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -212,7 +338,7 @@
                     android:text="Diversificado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_diversificado"
+                    android:id="@+id/rb_diversificadoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -220,7 +346,7 @@
                     android:text="Universidad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_universidad"
+                    android:id="@+id/rb_universidadSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -238,13 +364,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/estadoCivil">
+                android:id="@+id/estadoCivilSP">
 
                 <RadioButton
                     android:text="Soltero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_soltero"
+                    android:id="@+id/rb_solteroSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -252,7 +378,7 @@
                     android:text="Casado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_casado"
+                    android:id="@+id/rb_casadoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -260,7 +386,7 @@
                     android:text="Unido"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_unido"
+                    android:id="@+id/rb_unidoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -268,7 +394,7 @@
                     android:text="Divorsiado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_divorsiado"
+                    android:id="@+id/rb_divorsiadoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -276,11 +402,18 @@
                     android:text="Viudo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_viudo"
+                    android:id="@+id/rb_viudoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
             </RadioGroup>
+
+            <EditText
+                android:id="@+id/telefonoSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Escriba el numero de Telefono"/>
 
             <TextView
                 android:text="Seleccione el Cargo Comunitarios"
@@ -294,13 +427,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cargoComunidad">
+                android:id="@+id/cargoComunidadSP">
 
                 <RadioButton
                     android:text="COCODE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_cocode"
+                    android:id="@+id/rb_cocodeSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -308,7 +441,7 @@
                     android:text="Comite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_comite"
+                    android:id="@+id/rb_comiteSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -316,7 +449,7 @@
                     android:text="Pastor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_pastor"
+                    android:id="@+id/rb_pastorSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -324,7 +457,7 @@
                     android:text="Catequista"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_catequista"
+                    android:id="@+id/rb_catequistaSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -332,7 +465,7 @@
                     android:text="Lider Comunitario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_liderComunitario"
+                    android:id="@+id/rb_liderComunitarioSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -350,13 +483,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/idioma">
+                android:id="@+id/idiomaSP">
 
                 <RadioButton
                     android:text="Q'eqchi'"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_qeqchi"
+                    android:id="@+id/rb_qeqchiSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -364,7 +497,7 @@
                     android:text="Pocomchi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_pocomchi"
+                    android:id="@+id/rb_pocomchiSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -372,7 +505,7 @@
                     android:text="Castellano"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_castellano"
+                    android:id="@+id/rb_castellanoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -390,13 +523,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/oficio">
+                android:id="@+id/oficioSP">
 
                 <RadioButton
                     android:text="Jornalero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_jornalero"
+                    android:id="@+id/rb_jornaleroSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -404,7 +537,7 @@
                     android:text="Ama de Casa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_amaCasa"
+                    android:id="@+id/rb_amaCasaSP"
                     android:layout_weight="1"
                     android:checked="false"
                     android:visibility="gone"/>
@@ -413,7 +546,7 @@
                     android:text="Comerciante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_comerciante"
+                    android:id="@+id/rb_comercianteSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -421,7 +554,7 @@
                     android:text="Agricultor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_agricultor"
+                    android:id="@+id/rb_agricultorSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -429,14 +562,14 @@
                     android:text="Otro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_otroOficio"
+                    android:id="@+id/rb_otroOficioSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
             </RadioGroup>
 
             <EditText
-                android:id="@+id/otroOficio"
+                android:id="@+id/otroOficioSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -455,13 +588,13 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/religion">
+                android:id="@+id/religionSP">
 
                 <RadioButton
                     android:text="Catolico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_catolico"
+                    android:id="@+id/rb_catolicoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -469,7 +602,7 @@
                     android:text="Evangelico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_evangelico"
+                    android:id="@+id/rb_evangelicoSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
@@ -477,14 +610,14 @@
                     android:text="Otro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_otraReligion"
+                    android:id="@+id/rb_otraReligionSP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
             </RadioGroup>
 
             <EditText
-                android:id="@+id/otraReligion"
+                android:id="@+id/otraReligionSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -492,129 +625,34 @@
                 android:visibility="gone"/>
 
             <EditText
-                android:id="@+id/grupoParticipa"
+                android:id="@+id/grupoParticipaSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Escriba el grupo en el que participa"/>
 
-            <TextView
-                android:text="Seleccione la tenecia del terreno"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView11"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/teneciaTiera">
-
-                <RadioButton
-                    android:text="Propia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_propia"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Prestada"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_prestada"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Alquilada"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_alquilada"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Ninguna"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_ninguna"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:text="Seleccione si tiene Certeza Juridica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView12"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/certezaJuridica">
-
-                <RadioButton
-                    android:text="No"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_no"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Si"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_si"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
             <EditText
-                android:id="@+id/extensionTierra"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="Escriba la extension de tierra"/>
-
-            <EditText
-                android:id="@+id/ingresoEconomico"
+                android:id="@+id/ingresoEconomicoSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="Escriba el ingreso economico"/>
 
-            <TextView
-                android:text="Seleccione Fecha de Ingreso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView13"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
             <DatePicker
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:id="@+id/fecha"
+                android:id="@+id/fechaRegSP"
                 android:layout_gravity="center_horizontal"
                 android:datePickerMode="spinner"
-                android:calendarViewShown="false"/>
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnAgregarId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Agregar Participante" />
+                android:text="Agregar Subparticipante" />
 
         </LinearLayout>
     </ScrollView>
