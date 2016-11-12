@@ -6,14 +6,13 @@
     android:padding="10dp">
 
     <Button
-        android:id="@+id/btnAgregarVivienda"
+        android:id="@+id/btnAgregarEtno"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar Vivienda" />
-
+        android:text="Agregar Etnoveterinaria" />
 
     <ListView
-        android:id="@+id/listViewVivienda"
+        android:id="@+id/listViewEtno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:dividerHeight="2dp" >

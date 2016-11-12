@@ -6,11 +6,17 @@
     android:padding="10dp">
 
     <Button
-        android:id="@+id/btnAgregarVivienda"
+        android:id="@+id/btnAgregarAmbiente"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar Vivienda" />
+        android:text="Agregar Ambiente" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listViewVivienda"

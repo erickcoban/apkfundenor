@@ -86,6 +86,48 @@
             android:label="@string/title_activity_form" >
         </activity>
 
+        <!-- Formatos de Agregar Ambiente -->
+        <activity
+            android:name=".MyActivity_Ambiente"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".AgregarAmbiente"
+            android:label="@string/title_activity_form" >
+        </activity>
+
+        <!-- Formatos de Agregar Huertos -->
+        <activity
+            android:name=".MyActivityHuertos"
+            android:label="@string/title_activity_list" >
+        </activity>
+
+        <!-- Formatos de Agregar Etnoveterinaria -->
+        <activity
+            android:name=".MyActivityEtno"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".formulariosEtno"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".form_general_produccion"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_curacion"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_huevos"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_instalaciones"
+            android:label="@string/title_activity_form" >
+        </activity>
+
         <!--Listado de Menus Secundarios-->
         <activity
             android:name=".formularios"

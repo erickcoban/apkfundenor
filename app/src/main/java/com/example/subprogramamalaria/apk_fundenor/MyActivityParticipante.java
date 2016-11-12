@@ -54,8 +54,8 @@ public class MyActivityParticipante extends ActionBarActivity {
 
         String[] from = new String[] {
                 DBhelperParticipante.PARTICIPANTE_ID,
-                DBhelperParticipante.PARTICIPANTE_IDFAMILIA,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE1,
+                DBhelperParticipante.PARTICIPANTE_IDFAMILIA,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE2,
                 DBhelperParticipante.PARTICIPANTE_NOMBRE3,
                 DBhelperParticipante.PARTICIPANTE_APELLIDO1,

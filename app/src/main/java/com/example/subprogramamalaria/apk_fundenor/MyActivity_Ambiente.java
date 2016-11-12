@@ -24,9 +24,9 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MyActivity extends ActionBarActivity {
+public class MyActivity_Ambiente extends ActionBarActivity {
 
-    Button btnAgregarMiembro;
+    Button btnAgregarMiembro, btnAgregarAmbiente;
     ListView lista;
     SQLControlador dbconeccion;
     TextView tv_miemID, tv_miemNombre;
@@ -39,28 +39,26 @@ public class MyActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_my_ambiente);
 
-        final String usuarioActual = getIntent().getStringExtra("usuario");
+        final String idViv = getIntent().getStringExtra("idVivienda");
 
         dbconeccion = new SQLControlador(this);
         dbconeccion.abrirBaseDeDatos();
-        btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarVivienda);
+        btnAgregarAmbiente = (Button) findViewById(R.id.btnAgregarAmbiente);
         lista = (ListView) findViewById(R.id.listViewVivienda);
 
-        //acción del boton agregar viviendas
-        btnAgregarMiembro.setOnClickListener(new OnClickListener() {
+        //acción del boton agregar Ambiente
+        btnAgregarAmbiente.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iagregar = new Intent(MyActivity.this, AgregarMiembro.class);
+                Intent iagregar = new Intent(MyActivity_Ambiente.this, AgregarAmbiente.class);
                 //envia el usuario que se logea
-                iagregar.putExtra("usuario", usuarioActual);
-                Toast.makeText(getApplicationContext(), "envia " + usuarioActual, Toast.LENGTH_SHORT).show();
+                iagregar.putExtra("idViv", idViv);
+                Toast.makeText(getApplicationContext(), "envia " + idViv, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
-
-
 
         // Tomar los datos desde la base de datos para poner en el curso y después en el adapter
         Cursor cursor = dbconeccion.leerDatos();

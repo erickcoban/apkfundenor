@@ -18,9 +18,9 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MyActivitySubparticipante extends ActionBarActivity {
+public class MyActivityHuertos extends ActionBarActivity {
 
-    Button btnAgregarMiembro;
+    Button btnAgregarHuerto;
     ListView lista;
     SQLControladorSubparticipante dbconeccion;
     TextView tv_miemID, tv_miemNombre;
@@ -28,23 +28,23 @@ public class MyActivitySubparticipante extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_subparticipante);
+        setContentView(R.layout.activity_my_huertos);
 
         //Asigna el id del participante a la que pertenece
-        final String idPart = getIntent().getStringExtra("idPart");
+        final String idFam = getIntent().getStringExtra("idFam");
 
         dbconeccion = new SQLControladorSubparticipante(this);
         dbconeccion.abrirBaseDeDatos();
-        btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarSubparticipante);
-        lista = (ListView) findViewById(R.id.listViewSubparticipante);
+        btnAgregarHuerto = (Button) findViewById(R.id.btnAgregarHuerto);
+        lista = (ListView) findViewById(R.id.listViewHuerto);
 
         //acción del boton agregar miembro
-        btnAgregarMiembro.setOnClickListener(new OnClickListener() {
+        btnAgregarHuerto.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iagregar = new Intent(MyActivitySubparticipante.this, AgregarSubparticipante.class);
-                iagregar.putExtra("idPart",idPart);
-                Toast.makeText(getApplicationContext(), "envia " + idPart, Toast.LENGTH_SHORT).show();
+                Intent iagregar = new Intent(MyActivityHuertos.this, AgregarSubparticipante.class);
+                iagregar.putExtra("idFam",idFam);
+                Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });
@@ -107,7 +107,7 @@ public class MyActivitySubparticipante extends ActionBarActivity {
         };
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
-                MyActivitySubparticipante.this, R.layout.formato_fila, cursor, from, to);
+                MyActivityHuertos.this, R.layout.formato_fila, cursor, from, to);
 
         adapter.notifyDataSetChanged();
         lista.setAdapter(adapter);
@@ -123,9 +123,11 @@ public class MyActivitySubparticipante extends ActionBarActivity {
                 String aux_miembroId = tv_miemID.getText().toString();
                 String aux_miembroNombre = tv_miemNombre.getText().toString();
 
-                Intent modify_intent = new Intent(getApplicationContext(), ModificarSubparticipante.class);
-                modify_intent.putExtra("miembroId", aux_miembroId);
+                Intent modify_intent = new Intent(getApplicationContext(), form_general_huertos_familiares.class);
+                modify_intent.putExtra("idHuerto", aux_miembroId);
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);
+
+                Toast.makeText(getApplicationContext(), "envia " + aux_miembroId, Toast.LENGTH_SHORT).show();
                 startActivity(modify_intent);
             }
         });

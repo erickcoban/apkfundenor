@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class MyActivityFamilia extends ActionBarActivity {
 
-    Button btnAgregarMiembro;
+    Button btnAgregarMiembro, btnAgregarAmbiente;
     ListView lista;
     SQLControladorFamilia dbconeccion;
     TextView tv_miemID, tv_miemNombre;
@@ -36,6 +36,7 @@ public class MyActivityFamilia extends ActionBarActivity {
         dbconeccion = new SQLControladorFamilia(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarMiembro = (Button) findViewById(R.id.btnAgregarFamilia);
+        btnAgregarAmbiente = (Button) findViewById(R.id.btnAgregarAmbientes);
         lista = (ListView) findViewById(R.id.listViewFamilia);
 
         //acción del boton agregar miembro
@@ -46,6 +47,21 @@ public class MyActivityFamilia extends ActionBarActivity {
                 //envia el id de la vivienda
                 iagregar.putExtra("miembroId", idV);
                 Toast.makeText(getApplicationContext(), "envia " + idV, Toast.LENGTH_SHORT).show();
+                startActivity(iagregar);
+            }
+        });
+
+        //acción del boton agregar ambientes
+        btnAgregarAmbiente.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //tv_miemID = (TextView) v.findViewById(R.id.miembro_id);
+                //String aux_IdViv = tv_miemID.getText().toString();
+
+                Intent iagregar = new Intent(MyActivityFamilia.this, MyActivity_Ambiente.class);
+                //envia el usuario que se logea
+                /*iagregar.putExtra("idVivienda", aux_IdViv);
+                Toast.makeText(getApplicationContext(), "envia " + aux_IdViv, Toast.LENGTH_SHORT).show();*/
                 startActivity(iagregar);
             }
         });
