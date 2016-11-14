@@ -26,9 +26,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MyActivity_Ambiente extends ActionBarActivity {
 
-    Button btnAgregarMiembro, btnAgregarAmbiente;
+    Button btnAgregarAmbiente;
     ListView lista;
-    SQLControlador dbconeccion;
+    SQLControladorAmbiente dbconeccion;
     TextView tv_miemID, tv_miemNombre;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -43,10 +43,10 @@ public class MyActivity_Ambiente extends ActionBarActivity {
 
         final String idViv = getIntent().getStringExtra("idVivienda");
 
-        dbconeccion = new SQLControlador(this);
+        dbconeccion = new SQLControladorAmbiente(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarAmbiente = (Button) findViewById(R.id.btnAgregarAmbiente);
-        lista = (ListView) findViewById(R.id.listViewVivienda);
+        lista = (ListView) findViewById(R.id.listViewAmbiente);
 
         //acción del boton agregar Ambiente
         btnAgregarAmbiente.setOnClickListener(new OnClickListener() {
@@ -54,7 +54,7 @@ public class MyActivity_Ambiente extends ActionBarActivity {
             public void onClick(View v) {
                 Intent iagregar = new Intent(MyActivity_Ambiente.this, AgregarAmbiente.class);
                 //envia el usuario que se logea
-                iagregar.putExtra("idViv", idViv);
+                iagregar.putExtra("idVivienda", idViv);
                 Toast.makeText(getApplicationContext(), "envia " + idViv, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
@@ -64,19 +64,16 @@ public class MyActivity_Ambiente extends ActionBarActivity {
         Cursor cursor = dbconeccion.leerDatos();
 
         String[] from = new String[]{
-                DBhelper.VIVIENDA_ID,
-                DBhelper.VIVIENDA_NOMBRE,
-                DBhelper.VIVIENDA_LOCALIDAD,
-                DBhelper.VIVIENDA_USER,
-                DBhelper.VIVIENDA_PARED,
-                DBhelper.VIVIENDA_TECHO,
-                DBhelper.VIVIENDA_PISO,
-                DBhelper.VIVIENDA_DIVISION,
-                DBhelper.VIVIENDA_TIPOAGUA,
-                DBhelper.VIVIENDA_TIPOALMACENAGUA,
-                DBhelper.VIVIENDA_PURIFICACION,
-                DBhelper.VIVIENDA_ESTADO,
-                DBhelper.VIVIENDA_FECHA
+                DBhelperAmbiente.AMBIENTE_ID,
+                DBhelperAmbiente.AMBIENTE_AMBIENTE,
+                DBhelperAmbiente.AMBIENTE_NOMBRE,
+                DBhelperAmbiente.AMBIENTE_DIVISION,
+                DBhelperAmbiente.AMBIENTE_PARED,
+                DBhelperAmbiente.AMBIENTE_TECHO,
+                DBhelperAmbiente.AMBIENTE_PISO,
+                DBhelperAmbiente.AMBIENTE_MANTTO,
+                DBhelperAmbiente.AMBIENTE_LIMPIEZA,
+                DBhelperAmbiente.AMBIENTE_FECHA
         };
         int[] to = new int[]{
                 R.id.miembro_id,
@@ -88,10 +85,7 @@ public class MyActivity_Ambiente extends ActionBarActivity {
                 R.id.miembro_7,
                 R.id.miembro_8,
                 R.id.miembro_9,
-                R.id.miembro_10,
-                R.id.miembro_11,
-                R.id.miembro_12,
-                R.id.miembro_13
+                R.id.miembro_10
 
         };
 
@@ -112,9 +106,9 @@ public class MyActivity_Ambiente extends ActionBarActivity {
                 String aux_miembroId = tv_miemID.getText().toString();
                 String aux_miembroNombre = tv_miemNombre.getText().toString();
 
-                Intent modify_intent = new Intent(getApplicationContext(), MyActivityFamilia.class);
+                Intent modify_intent = new Intent(getApplicationContext(), form_general_huevos.class);
                 //Identificador de la vivienda
-                modify_intent.putExtra("miembroId", aux_miembroId);
+                modify_intent.putExtra("idAmbiente", aux_miembroId);
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);
                 startActivity(modify_intent);
             }

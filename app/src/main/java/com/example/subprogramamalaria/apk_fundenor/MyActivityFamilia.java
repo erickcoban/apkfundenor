@@ -31,7 +31,7 @@ public class MyActivityFamilia extends ActionBarActivity {
         setContentView(R.layout.activity_my_familia);
 
         //Asigna el numero de la vivienda a la que pertenece
-        final String idV = getIntent().getStringExtra("miembroId");
+        final String idV = getIntent().getStringExtra("idVivienda");
 
         dbconeccion = new SQLControladorFamilia(this);
         dbconeccion.abrirBaseDeDatos();
@@ -45,7 +45,7 @@ public class MyActivityFamilia extends ActionBarActivity {
             public void onClick(View v) {
                 Intent iagregar = new Intent(MyActivityFamilia.this, AgregarFamilia.class);
                 //envia el id de la vivienda
-                iagregar.putExtra("miembroId", idV);
+                iagregar.putExtra("idVivienda", idV);
                 Toast.makeText(getApplicationContext(), "envia " + idV, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
@@ -60,8 +60,8 @@ public class MyActivityFamilia extends ActionBarActivity {
 
                 Intent iagregar = new Intent(MyActivityFamilia.this, MyActivity_Ambiente.class);
                 //envia el usuario que se logea
-                /*iagregar.putExtra("idVivienda", aux_IdViv);
-                Toast.makeText(getApplicationContext(), "envia " + aux_IdViv, Toast.LENGTH_SHORT).show();*/
+                iagregar.putExtra("idVivienda", idV);
+                Toast.makeText(getApplicationContext(), "envia " + idV, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
             }
         });

@@ -51,7 +51,6 @@ public class MyActivityHuertos extends ActionBarActivity {
 
         // Tomar los datos desde la base de datos para poner en el curso y después en el adapter
         Cursor cursor = dbconeccion.leerDatos();
-
         String[] from = new String[] {
                 DBhelperHuertos.HUERTO_ID,
                 DBhelperHuertos.HUERTO_IDFAM,

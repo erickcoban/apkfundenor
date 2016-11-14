@@ -1,11 +1,1806 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+            android:text="Hortalizas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:textStyle="normal|bold"
+            android:paddingTop="10dp"
+            android:textSize="16sp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Descripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:layout_weight="1"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:text="Brocoli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:layout_weight="1"
+                        android:paddingTop="7dp" />
+
+                    <TextView
+                        android:text="Ayotio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Repollo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Arracach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView11"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Zanahoria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Tomate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView13"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Berenjena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView14"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Camote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView15"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Rabano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView16"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Cebolla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView17"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Tomatio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView18"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Yuca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView19"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Remolacha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView20"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Tomate de Arbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView21"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Malanga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView22"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Osh / Quescamote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView23"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView6"
+                        android:layout_weight="1" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsume16"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Vende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvende16"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Compra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompra16"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+            </GridLayout>
+
+            <TextView
+                android:text="Plantas Comestibles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Descripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView25"
+                        android:layout_weight="1"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:text="Apio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView26"
+                        android:layout_weight="1"
+                        android:paddingTop="7dp" />
+
+                    <TextView
+                        android:text="Cebollin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView27"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Guisquil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView28"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Bledo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Chaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView29"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Cilantro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView30"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Hierba Buena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView31"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Zamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView32"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Tomillo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView33"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Macuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView34"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Amaranto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView35"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Acelga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView36"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Puerro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView37"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Chipilin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView38"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Oregano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView39"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Espinaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView40"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Tunay / Tzoloj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView41"
+                        android:layout_weight="1"
+                        android:paddingTop="15dp" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView42"
+                        android:layout_weight="1" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC16"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePC17"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Vende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView43"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC16"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePC17"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Compra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView45"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC12"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC13"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC14"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC15"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC16"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPC17"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+            </GridLayout>
+
+            <TextView
+            android:text="Plantas Medicinales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView44"
+            android:textStyle="normal|bold"
+            android:paddingTop="10dp"
+            android:textSize="16sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Descripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView45"
+                        android:layout_weight="1"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:text="Apazote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView46"
+                        android:layout_weight="1"
+                        android:paddingTop="7dp" />
+
+                    <TextView
+                        android:text="Ruda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView47"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Malba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView48"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Flor de Muerto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView49"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Albahaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView50"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Té de Limon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView51"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Mil en Rama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView72"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Sangre de Cristo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView52"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Sabila"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView53"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Ajenjo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView54"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView55"
+                        android:layout_weight="1" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumePM10"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Vende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView56"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendePM10"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Compra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView57"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraPM10"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+            </GridLayout>
+
+            <TextView
+                android:text="Especies Frutales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView58"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Descripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView59"
+                        android:layout_weight="1"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:text="Naranja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView60"
+                        android:layout_weight="1"
+                        android:paddingTop="7dp" />
+
+                    <TextView
+                        android:text="Jocotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView61"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Durazno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView62"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Bananos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView63"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Limas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView64"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Granadia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView65"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Mandarina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView66"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Paterna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView67"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Naranjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView68"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Cacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView73"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Mangos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView74"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                    <TextView
+                        android:text="Guanaba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView75"
+                        android:layout_weight="1"
+                        android:paddingTop="13dp" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView69"
+                        android:layout_weight="1" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbconsumeEF12"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Vende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView70"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbvendeEF12"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="Compra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView71"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF1"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF2"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF3"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF4"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF5"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF6"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF7"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF8"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF9"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF10"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF11"
+                        android:layout_weight="1" />
+                    <CheckBox
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbcompraEF12"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+            </GridLayout>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaDiversificacion"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAgregarId"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:text="Guardar Diversificación" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <TextView
-        android:text="Formulario Diversificación de Huerto"
+        android:text="Formulario de Diversificación"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+
 </LinearLayout>

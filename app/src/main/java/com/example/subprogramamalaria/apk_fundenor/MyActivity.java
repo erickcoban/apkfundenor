@@ -116,7 +116,7 @@ public class MyActivity extends ActionBarActivity {
 
                 Intent modify_intent = new Intent(getApplicationContext(), MyActivityFamilia.class);
                 //Identificador de la vivienda
-                modify_intent.putExtra("miembroId", aux_miembroId);
+                modify_intent.putExtra("idVivienda", aux_miembroId);
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);
                 startActivity(modify_intent);
             }

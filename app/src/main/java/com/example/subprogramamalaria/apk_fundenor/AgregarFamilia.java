@@ -36,11 +36,11 @@ public class AgregarFamilia extends Activity implements OnClickListener {
         switch (v.getId()) {
             case R.id.btnAgregarId:
                 String name = et.getText().toString();
-                String idVivienda = getIntent().getStringExtra("miembroId");
+                String idVivienda = getIntent().getStringExtra("idVivienda");
                 dbconeccion.insertarDatos(name, idVivienda);
                 Intent main = new Intent(AgregarFamilia.this, MyActivityFamilia.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                main.putExtra("miembroId",idVivienda);
+                main.putExtra("idVivienda",idVivienda);
                 startActivity(main);
                 break;
 
