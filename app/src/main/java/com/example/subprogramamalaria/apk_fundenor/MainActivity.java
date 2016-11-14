@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener {
     JSONParser jsonParser = new JSONParser();
 
     //Comunicación mediante formulario PHP
-    private static final String LOGIN_URL = "http://fundenorcoban.esy.es/funsys/index.php";
+    private static final String LOGIN_URL = "http://fundenorcoban.esy.es/funsys/login.php";
 
     // La respuesta del JSON es
     private static final String TAG_SUCCESS = "success";
