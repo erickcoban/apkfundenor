@@ -22,7 +22,7 @@ public class MyActivityHuertos extends ActionBarActivity {
 
     Button btnAgregarHuerto;
     ListView lista;
-    SQLControladorSubparticipante dbconeccion;
+    SQLControladorHuertos dbconeccion;
     TextView tv_miemID, tv_miemNombre;
 
     @Override
@@ -33,7 +33,7 @@ public class MyActivityHuertos extends ActionBarActivity {
         //Asigna el id del participante a la que pertenece
         final String idFam = getIntent().getStringExtra("idFam");
 
-        dbconeccion = new SQLControladorSubparticipante(this);
+        dbconeccion = new SQLControladorHuertos(this);
         dbconeccion.abrirBaseDeDatos();
         btnAgregarHuerto = (Button) findViewById(R.id.btnAgregarHuerto);
         lista = (ListView) findViewById(R.id.listViewHuerto);
@@ -42,7 +42,7 @@ public class MyActivityHuertos extends ActionBarActivity {
         btnAgregarHuerto.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iagregar = new Intent(MyActivityHuertos.this, AgregarSubparticipante.class);
+                Intent iagregar = new Intent(MyActivityHuertos.this, AgregarHuertos.class);
                 iagregar.putExtra("idFam",idFam);
                 Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
                 startActivity(iagregar);
@@ -53,31 +53,16 @@ public class MyActivityHuertos extends ActionBarActivity {
         Cursor cursor = dbconeccion.leerDatos();
 
         String[] from = new String[] {
-                DBhelperSubparticipante.SUBPARTICIPANTE_ID,
-                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE1,
-                DBhelperSubparticipante.SUBPARTICIPANTE_IDPART,
-                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE2,
-                DBhelperSubparticipante.SUBPARTICIPANTE_NOMBRE3,
-                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDO1,
-                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDO2,
-                DBhelperSubparticipante.SUBPARTICIPANTE_APELLIDOC,
-                DBhelperSubparticipante.SUBPARTICIPANTE_GENERO,
-                DBhelperSubparticipante.SUBPARTICIPANTE_CONSANGUINIDAD,
-                DBhelperSubparticipante.SUBPARTICIPANTE_FECHANAC,
-                DBhelperSubparticipante.SUBPARTICIPANTE_TALLA,
-                DBhelperSubparticipante.SUBPARTICIPANTE_PESO,
-                DBhelperSubparticipante.SUBPARTICIPANTE_DESNUTICION,
-                DBhelperSubparticipante.SUBPARTICIPANTE_CUI,
-                DBhelperSubparticipante.SUBPARTICIPANTE_GRADOACA,
-                DBhelperSubparticipante.SUBPARTICIPANTE_ESTADOCIV,
-                DBhelperSubparticipante.SUBPARTICIPANTE_TELEFONO,
-                DBhelperSubparticipante.SUBPARTICIPANTE_CARGOCOM,
-                DBhelperSubparticipante.SUBPARTICIPANTE_IDIOMA,
-                DBhelperSubparticipante.SUBPARTICIPANTE_OFICIO,
-                DBhelperSubparticipante.SUBPARTICIPANTE_RELIGION,
-                DBhelperSubparticipante.SUBPARTICIPANTE_GRUPO,
-                DBhelperSubparticipante.SUBPARTICIPANTE_INGRESOE,
-                DBhelperSubparticipante.SUBPARTICIPANTE_FECHAREG
+                DBhelperHuertos.HUERTO_ID,
+                DBhelperHuertos.HUERTO_IDFAM,
+                DBhelperHuertos.HUERTO_NOMBRE,
+                DBhelperHuertos.HUERTO_FECHA,
+                DBhelperHuertos.HUERTO_BUENAP,
+                DBhelperHuertos.HUERTO_INGRESOS,
+                DBhelperHuertos.HUERTO_MANTTOT,
+                DBhelperHuertos.HUERTO_PRODUCCIONORG,
+                DBhelperHuertos.HUERTO_PRACTICAAGUA,
+                DBhelperHuertos.HUERTO_FECHAHUERTO
         };
         int[] to = new int[] {
                 R.id.miembro_id,
@@ -89,21 +74,7 @@ public class MyActivityHuertos extends ActionBarActivity {
                 R.id.miembro_7,
                 R.id.miembro_8,
                 R.id.miembro_9,
-                R.id.miembro_10,
-                R.id.miembro_11,
-                R.id.miembro_12,
-                R.id.miembro_13,
-                R.id.miembro_14,
-                R.id.miembro_15,
-                R.id.miembro_16,
-                R.id.miembro_17,
-                R.id.miembro_18,
-                R.id.miembro_19,
-                R.id.miembro_20,
-                R.id.miembro_21,
-                R.id.miembro_22,
-                R.id.miembro_24,
-                R.id.miembro_25
+                R.id.miembro_10
         };
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(

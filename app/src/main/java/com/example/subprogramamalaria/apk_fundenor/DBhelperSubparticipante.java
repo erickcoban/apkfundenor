@@ -55,7 +55,7 @@ public class DBhelperSubparticipante extends SQLiteOpenHelper {
             + SUBPARTICIPANTE_TALLA + " TEXT, "
             + SUBPARTICIPANTE_PESO + " TEXT, "
             + SUBPARTICIPANTE_DESNUTICION + " TEXT, "
-            + SUBPARTICIPANTE_CUI + " TEXT NOT NULL, "
+            + SUBPARTICIPANTE_CUI + " TEXT, "
             + SUBPARTICIPANTE_GRADOACA + " TEXT NOT NULL, "
             + SUBPARTICIPANTE_ESTADOCIV + " TEXT NOT NULL, "
             + SUBPARTICIPANTE_TELEFONO + " TEXT, "

@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/rb_madera"
                         android:layout_weight="1"
-                        android:checked="false"/>
+                        android:checked="true"/>
 
                     <RadioButton
                         android:text="Block"
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_lamina"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Paja"
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_tierra"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Cemento"
@@ -254,7 +254,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_no"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Si"
@@ -286,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_entubada"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Potable"
@@ -350,7 +350,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_tinaco"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Toneles"
@@ -423,7 +423,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_clorada"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Hervida"
@@ -465,7 +465,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_gravity="center"
-                android:text="Datos Ambientes, Mobiliarios y Accesorios" />
+                android:text="Agregar" />
 
         </LinearLayout>
     </ScrollView>

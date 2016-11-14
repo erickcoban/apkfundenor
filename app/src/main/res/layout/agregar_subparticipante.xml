@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_conyugue"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Hijo / Hija"
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_masculinoSP"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Femenino"
@@ -182,14 +182,14 @@
                     android:id="@+id/tallaSP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:hint="Escriba la talla del niño (a)"/>
 
                 <EditText
                     android:id="@+id/pesoSP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:hint="Escriba el peso del niño (a)"/>
 
                 <TextView
@@ -284,7 +284,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/rb_ningunoSP"
                         android:layout_weight="1"
-                        android:checked="false"/>
+                        android:checked="true"/>
 
                 </RadioGroup>
             </LinearLayout>
@@ -294,6 +294,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:maxLength="13"
                 android:hint="Escriba el numero de CUI / DPI"/>
 
             <TextView
@@ -309,6 +310,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/gradoAcademicoSP">
+
+                <RadioButton
+                    android:text="Ninguno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_ningunoGA"
+                    android:layout_weight="1"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Preprimaria"
@@ -372,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_solteroSP"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Casado"
@@ -428,6 +437,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/cargoComunidadSP">
+
+                <RadioButton
+                    android:text="Ninguno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_ningunoCC"
+                    android:layout_weight="1"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="COCODE"
@@ -507,7 +524,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_castellanoSP"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
             </RadioGroup>
 
@@ -531,7 +548,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_jornaleroSP"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Ama de Casa"
@@ -596,7 +613,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_catolicoSP"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Evangelico"

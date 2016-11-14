@@ -101,6 +101,10 @@
             android:name=".MyActivityHuertos"
             android:label="@string/title_activity_list" >
         </activity>
+        <activity
+            android:name=".AgregarHuertos"
+            android:label="@string/title_activity_form" >
+        </activity>
 
         <!-- Formatos de Agregar Etnoveterinaria -->
         <activity

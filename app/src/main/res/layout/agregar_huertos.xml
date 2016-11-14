@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:text="Formulario de Huertos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/medidaHuerto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique las medidas del Huerto">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:text="Seleccione la fecha de Implementación"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13" />
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaImplementacion"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="visible"/>
+
+            <TextView
+                android:text="Seleccione si Tiene Buenas Practicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noH"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siH"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/ingresoSemanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:hint="Escriba el ingreso Semanal">
+            </EditText>
+
+            <TextView
+                android:text="Seleccione las practicas de Mantenimiento del Suelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:text="Abonera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAbonera"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:text="Barreras Vivas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbBarrerasV"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Barreras Muertas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbBarrerasM"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Curva a Nivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbCurvaNivel"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Acequias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAcequias"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Tablones Dobles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbTablonesD"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Rastrojo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRastrojo"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Abono Organico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAbonoOrga"
+                    android:layout_weight="1" />
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione si tiene Producción Organica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noPO"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siPO"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione si tiene Practicas sin Agua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noPA"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siPA"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaRegH"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAgregarId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Agregar" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

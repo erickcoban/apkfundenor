@@ -35,7 +35,151 @@
             </EditText>
 
             <TextView
-                android:text="Seleccione el tipo de pared"
+                android:text="Seleccione el tipo de ambienre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tiene_divisiones">
+
+                <RadioButton
+                    android:text="Habitación"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_habitacion"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Cocina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_cocina"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Ducha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_ducha"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Letrina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_letrina"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Lavadero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_lavadero"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione el tipo de División"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tipo_paredD">
+
+                <RadioButton
+                    android:text="Madera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_maderaD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_blockD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Palo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_paloD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Bambu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_bambuD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Tañil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_tanilD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Costal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_costalD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Nylon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_nylonD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Mixto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_mixtoD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Sin Pared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_sin_paredD"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione el tipo de Pared"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3"
@@ -235,39 +379,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="Cuenta con Divisiones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/tiene_divisiones">
-
-                <RadioButton
-                    android:text="No"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_no"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Si"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_si"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:text="Seleccione tipo de acceso de agua"
+                android:text="Mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView6"
@@ -281,7 +393,7 @@
                 android:id="@+id/acceso_agua">
 
                 <RadioButton
-                    android:text="Entubada"
+                    android:text="Bueno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_entubada"
@@ -289,7 +401,7 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Potable"
+                    android:text="Regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_potable"
@@ -297,41 +409,17 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Pozo"
+                    android:text="Malo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_pozo"
                     android:layout_weight="1"
                     android:checked="false"/>
 
-                <RadioButton
-                    android:text="Quebrada"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_quebrada"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Nacimeinto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_nacimiento"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Rio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_rio"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
             </RadioGroup>
 
             <TextView
-                android:text="En que almacena el agua"
+                android:text="Limpieza del ambiente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView7"
@@ -345,7 +433,7 @@
                 android:id="@+id/almacena_agua">
 
                 <RadioButton
-                    android:text="Tinaco"
+                    android:text="Bueno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_tinaco"
@@ -353,7 +441,7 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Toneles"
+                    android:text="Regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_toneles"
@@ -361,91 +449,10 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Cubeta"
+                    android:text="Malo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_cubeta"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Botella"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_botella"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Tanque"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_tanque"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Otro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_otro"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <EditText
-                android:id="@+id/otroTipoAlmacen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Especifique el otro tipo de almacen"
-                android:visibility="gone">
-            </EditText>
-
-            <TextView
-                android:text="Técnica de purificacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView8"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/purifica_agua">
-
-                <RadioButton
-                    android:text="Clorada"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_clorada"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Hervida"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_hervida"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Ecofiltro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_ecofiltro"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Ninguna"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_ninguna"
                     android:layout_weight="1"
                     android:checked="false"/>
 

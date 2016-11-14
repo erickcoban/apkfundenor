@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_masculino"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Femenino"
@@ -131,6 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:maxLength="13"
                 android:hint="Escriba el numero de CUI / DPI"/>
 
             <TextView
@@ -146,6 +147,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/gradoAcademico">
+
+                <RadioButton
+                    android:text="Ninguno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_ningunoGAP"
+                    android:layout_weight="1"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Preprimaria"
@@ -209,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_soltero"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Casado"
@@ -266,6 +275,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/cargoComunidad">
+
+                <RadioButton
+                    android:text="Ninguno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_ningunoCCP"
+                    android:layout_weight="1"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="COCODE"
@@ -345,7 +362,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_castellano"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
             </RadioGroup>
 
@@ -369,7 +386,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_jornalero"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Ama de Casa"
@@ -434,7 +451,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_catolico"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Evangelico"
@@ -513,7 +530,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_ninguna"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
             </RadioGroup>
 
@@ -537,7 +554,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rb_no"
                     android:layout_weight="1"
-                    android:checked="false"/>
+                    android:checked="true"/>
 
                 <RadioButton
                     android:text="Si"
@@ -560,7 +577,7 @@
                 android:id="@+id/ingresoEconomico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:hint="Escriba el ingreso economico"/>
 
             <DatePicker
