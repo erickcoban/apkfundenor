@@ -25,6 +25,8 @@ import java.util.List;
 
 public class MainActivity extends Activity implements OnClickListener {
 
+    SQLControladorUsuarios dbconeccion;
+
     //Declaración de Variables
     private EditText user, pass;
     private Button mSubmit;
@@ -34,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener {
     JSONParser jsonParser = new JSONParser();
 
     //Comunicación mediante formulario PHP
-    private static final String LOGIN_URL = "http://proyectomalaria.hol.es/malaria/login.php";
+    private static final String LOGIN_URL = "http://fundenorcoban.esy.es/funsys/index.php";
 
     // La respuesta del JSON es
     private static final String TAG_SUCCESS = "success";

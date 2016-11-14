@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="324dp"
+            android:layout_height="52dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="FORMULARIOS"
+            android:id="@+id/textView2"
+            android:gravity="center_vertical|center_horizontal"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="right"
+            android:src="@drawable/web_hi_res_512" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.11" >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_ambientes"
+            android:choiceMode="singleChoice" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CERRAR"
+            android:id="@+id/btnCerrar"
+            android:layout_weight="0.5"
+            android:onClick="onclicBtnClose"/>
+
+        <!--Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SINCRONIZAR"
+            android:id="@+id/btnSync"
+            android:layout_weight="0.5" /-->
+    </LinearLayout>
+
+</LinearLayout>

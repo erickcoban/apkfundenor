@@ -106,7 +106,7 @@ public class MyActivity_Ambiente extends ActionBarActivity {
                 String aux_miembroId = tv_miemID.getText().toString();
                 String aux_miembroNombre = tv_miemNombre.getText().toString();
 
-                Intent modify_intent = new Intent(getApplicationContext(), form_general_huevos.class);
+                Intent modify_intent = new Intent(getApplicationContext(), formulariosAmbientes.class);
                 //Identificador de la vivienda
                 modify_intent.putExtra("idAmbiente", aux_miembroId);
                 modify_intent.putExtra("miembroNombre", aux_miembroNombre);

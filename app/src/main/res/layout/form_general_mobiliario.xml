@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="20dp">
+
+    <TextView
+        android:text="Formulario Mobiliario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Seleccione si tiene Roperos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_roperos">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siRop"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noRop"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noRop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique la cantidad de Roperos"/>
+
+            <TextView
+                android:text="Seleccione si tiene Camas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_camas">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siCam"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noCam"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noRop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique la cantidad de Camas"/>
+
+            <TextView
+                android:text="Seleccione si tipo de Cama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_camas">
+
+                <RadioButton
+                    android:text="Tapesco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_tapesco"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Tabla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_tabla"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Catre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_catre"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Petate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_petate"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Cama de Madera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_cama_madera"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Sumier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_sumier"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione si tiene Plateras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_plateras">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siPla"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noPla"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noPla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique la cantidad de Plateras"/>
+
+            <TextView
+                android:text="Seleccione si tiene Mesas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_roperos">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siMes"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noMes"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noRop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique la cantidad de Mesas"/>
+
+            <TextView
+                android:text="Seleccione si tiene Sillas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_sillas">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siSil"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noSil"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noSil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Especifique la cantidad de Sillas"/>
+
+            <TextView
+                android:text="Seleccione si tiene Estufa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cantidad_estufa">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siEst"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noEst"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Seleccione el tipo de Estufa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tipo_estufa">
+
+                <RadioButton
+                    android:text="Plancha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_plancha"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Lorena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_lorena"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Fundenor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_fundenor"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Onil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_onil"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Trebe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_trebe"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Chimena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_chimenea"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Tres Piedras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_tres_piedras"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Polleton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_polleton"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+                <RadioButton
+                    android:text="Chimenea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_chimenea"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Especifique si el Trebe se encuentra en el suelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lugar_trebe">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siTre"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noTre"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

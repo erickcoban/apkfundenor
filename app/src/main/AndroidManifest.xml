@@ -95,6 +95,18 @@
             android:name=".AgregarAmbiente"
             android:label="@string/title_activity_form" >
         </activity>
+        <activity
+            android:name=".formulariosAmbientes"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".form_general_mobiliario"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <activity
+            android:name=".form_general_accesorios"
+            android:label="@string/title_activity_form" >
+        </activity>
 
         <!-- Formatos de Agregar Huertos -->
         <activity
