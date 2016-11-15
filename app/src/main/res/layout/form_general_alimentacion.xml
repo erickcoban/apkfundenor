@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="20dp">
+
+    <TextView
+        android:text="Formulario de Alimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+            android:text="Utiliza Concentrado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textStyle="normal|bold"
+            android:paddingTop="10dp"
+            android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/utiliza_concentrado">
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_noConc"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_siConc"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LTipoCon"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Tipo de Concentrado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tipo_concentrado">
+
+                    <RadioButton
+                        android:text="Casero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_casero"
+                        android:layout_weight="1"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:text="Industrial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_industrial"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+            android:text="Otro tipo de Alimentos para las Aves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:textStyle="normal|bold"
+            android:paddingTop="10dp"
+            android:textSize="16sp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tiene_comedero">
+
+
+                <CheckBox
+                    android:text="Maiz Molido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbMMol"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Maiz Entero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbME"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Masa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbM"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Desperdicios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbDes"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Hierbas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbHier"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaAlimen"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAgregarAliment"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:text="Agregar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

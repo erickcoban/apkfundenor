@@ -17,8 +17,8 @@ public class formularios extends ActionBarActivity {
 
     //Declaramos las Variables
     ListViewAdapter adapter;
-    String[] menu = {"PARTICIPANTE", "HUERTOS FAMILIARES", "ETNOVETERINARIA", "TRANSFORAMACION DE ALIMENTOS"};
-    int[] img = {R.drawable.icono1, R.drawable.icono1, R.drawable.icono1, R.drawable.icono1};
+    String[] menu = {"PARTICIPANTE", "HUERTOS FAMILIARES", "ETNOVETERINARIA"};
+    int[] img = {R.drawable.icono1, R.drawable.icono1, R.drawable.icono1};
 
     Button btn_cerrar;
 
@@ -63,13 +63,13 @@ public class formularios extends ActionBarActivity {
                         Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
-                    case 3:
+                    /*case 3:
                         i = new Intent(getApplicationContext(), form_general_transformacion.class);
                         //Envia el Usuario que ingresa
                         i.putExtra("idFam",idFam);
                         Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
                         startActivity(i);
-                        break;
+                        break;*/
                 }
             }
         });

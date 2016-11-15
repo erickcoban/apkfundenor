@@ -16,7 +16,7 @@ public class formulariosEtno extends ActionBarActivity {
 
     //Declaramos las Variables
     ListViewAdapter adapter;
-    String[] menu = {"PRODUCCIÓN", "INSTALACIONES", "HUEVOS", "CURACIÓN"};
+    String[] menu = {"PRODUCCIÓN", "INSTALACIONES", "HUEVOS", "ALIMENTACION"};
     int[] img = {R.drawable.icono1, R.drawable.icono1, R.drawable.icono1, R.drawable.icono1};
 
     Button btn_cerrar;
@@ -63,12 +63,19 @@ public class formulariosEtno extends ActionBarActivity {
                         startActivity(i);
                         break;
                     case 3:
-                        i = new Intent(getApplicationContext(), form_general_curacion.class);
+                        i = new Intent(getApplicationContext(), form_general_alimentacion.class);
                         //Envia el Usuario que ingresa
                         i.putExtra("idEtno",idEtno);
                         Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
+                    /*case 4:
+                        i = new Intent(getApplicationContext(), form_general_curacion.class);
+                        //Envia el Usuario que ingresa
+                        i.putExtra("idEtno",idEtno);
+                        Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
+                        startActivity(i);
+                        break;*/
                 }
             }
         });
