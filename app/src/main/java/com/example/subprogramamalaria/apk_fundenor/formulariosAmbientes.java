@@ -28,6 +28,7 @@ public class formulariosAmbientes extends ActionBarActivity {
 
         //Asigna el numero de la familia a la que pertenece
         final String idAmbiente = getIntent().getStringExtra("idAmbiente");
+        final String ambiente = getIntent().getStringExtra("ambiente");
 
         //CREA LOS MENUS
         final ListView lista = (ListView) findViewById(R.id.list_ambientes);
@@ -45,14 +46,16 @@ public class formulariosAmbientes extends ActionBarActivity {
                         Intent i = new Intent(getApplicationContext(), form_general_mobiliario.class);
                         //Envia el id del menu
                         i.putExtra("idAmbiente",idAmbiente);
-                        Toast.makeText(getApplicationContext(), "envia " + idAmbiente, Toast.LENGTH_SHORT).show();
+                        i.putExtra("ambiente",ambiente);
+                        Toast.makeText(getApplicationContext(), "envia " + idAmbiente+ " Ambiente "+ambiente, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                     case 1:
                         i = new Intent(getApplicationContext(), form_general_accesorios.class);
                         //Envia el Usuario que ingresa
                         i.putExtra("idAmbiente",idAmbiente);
-                        Toast.makeText(getApplicationContext(), "envia " + idAmbiente, Toast.LENGTH_SHORT).show();
+                        i.putExtra("ambiente",ambiente);
+                        Toast.makeText(getApplicationContext(), "envia " + idAmbiente+ " Ambiente "+ambiente, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                 }

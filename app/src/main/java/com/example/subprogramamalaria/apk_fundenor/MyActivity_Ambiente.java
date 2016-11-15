@@ -104,12 +104,13 @@ public class MyActivity_Ambiente extends ActionBarActivity {
                 tv_miemNombre = (TextView) view.findViewById(R.id.miembro_nombre);
 
                 String aux_miembroId = tv_miemID.getText().toString();
-                String aux_miembroNombre = tv_miemNombre.getText().toString();
+                String ambiente = tv_miemNombre.getText().toString();
 
                 Intent modify_intent = new Intent(getApplicationContext(), formulariosAmbientes.class);
                 //Identificador de la vivienda
                 modify_intent.putExtra("idAmbiente", aux_miembroId);
-                modify_intent.putExtra("miembroNombre", aux_miembroNombre);
+                modify_intent.putExtra("ambiente", ambiente);
+                Toast.makeText(getApplicationContext(), "envia " + ambiente, Toast.LENGTH_SHORT).show();
                 startActivity(modify_intent);
             }
         });

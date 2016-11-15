@@ -21,400 +21,448 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:text="Seleccione accesorios de Habitación"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
+                android:orientation="vertical"
+                android:id="@+id/LHabitacion"
+                android:visibility="gone">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/acc_habit">
-
-                <RadioButton
-                    android:text="Almohadas"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:text="Seleccione accesorios de Habitación"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_almohadas"
-                    android:layout_weight="1"
-                    android:checked="true"/>
+                    android:id="@+id/textView2"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp" />
 
-                <RadioButton
-                    android:text="Chamarras / Ponchos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/chamarras"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/acc_habit">
 
-                <RadioButton
-                    android:text="Espejo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/espejo"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Almohadas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/almohadas"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Palita"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/palita"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Chamarras / Ponchos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chamarras"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Escoba"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/escoba"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Espejo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/espejo"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Sabanas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/sabanas"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Palita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/palita"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Peine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/peine"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Escoba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/escoba"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Ninguno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ninguno"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Sabanas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sabanas"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            </RadioGroup>
+                    <CheckBox
+                        android:text="Peine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/peine"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            <TextView
-                android:text="Seleccione accesorios de Cocina"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
+                    <CheckBox
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ningunoHA"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/acc_cocina">
+                </RadioGroup>
+            </LinearLayout>
 
-                <RadioButton
-                    android:text="Salero"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/salero"
-                    android:layout_weight="1"
-                    android:checked="true"/>
-
-                <RadioButton
-                    android:text="Azucarera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/azucarera"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Cubiertos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/cubiertos"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Cuchillos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/cuchillos"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Ninguno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ningunoCO"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:text="Seleccione accesorios de Letrina"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/acc_letrina">
-
-                <RadioButton
-                    android:text="Basurero"
-                    android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/LCocina"
+                android:visibility="gone">
+                <TextView
+                    android:text="Seleccione accesorios de Cocina"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/basurero"
-                    android:layout_weight="1"
-                    android:checked="true"/>
+                    android:id="@+id/textView3"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp" />
 
-                <RadioButton
-                    android:text="Porta Toilet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/porta_toilet"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/acc_cocina">
 
-                <RadioButton
-                    android:text="Toilet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toilet"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Salero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/salero"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Prensa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prensa"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Azucarera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/azucarera"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Olotes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/olotes"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Cubiertos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cubiertos"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Plantas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/plantas"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Cuchillos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cuchillos"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Toallas Sanitarias"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toallas_sani"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ningunoCO"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Toallitas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toallitas"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                </RadioGroup>
+            </LinearLayout>
 
-                <RadioButton
-                    android:text="Tuza"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tuza"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
-                    android:text="Ninguno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ningunoLE"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:text="Seleccione accesorios de Ducha"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
+                android:orientation="vertical"
+                android:id="@+id/LLetrina"
+                android:visibility="gone">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/acc_ducha">
-
-                <RadioButton
-                    android:text="Jabon"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:text="Seleccione accesorios de Letrina"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jabon"
-                    android:layout_weight="1"
-                    android:checked="true"/>
+                    android:id="@+id/textView4"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp" />
 
-                <RadioButton
-                    android:text="Shampoo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/shampoo"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/acc_letrina">
 
-                <RadioButton
-                    android:text="Toallero"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toallero"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Basurero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/basurero"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Toalla"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toalla_ducha"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Porta Toilet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/porta_toilet"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Detergente"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/detergente_ducha"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Toilet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toilet"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Pashte"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pashte"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Prensa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/prensa"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Ninguno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ninguno_ducha"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Olotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/olotes"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            </RadioGroup>
+                    <CheckBox
+                        android:text="Plantas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/plantas"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            <TextView
-                android:text="Seleccione accesorios de Lavadero"
+                    <CheckBox
+                        android:text="Toallas Sanitarias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toallas_sani"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Toallitas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toallitas"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Tuza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tuza"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ninguno_letrina"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView6"
-                android:textStyle="normal|bold"
-                android:paddingTop="10dp"
-                android:textSize="16sp" />
+                android:orientation="vertical"
+                android:id="@+id/LDucha"
+                android:visibility="gone">
 
-            <RadioGroup
+                <TextView
+                    android:text="Seleccione accesorios de Ducha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/acc_ducha">
+
+                    <CheckBox
+                        android:text="Jabon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jabon"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Shampoo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shampoo"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Toallero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toallero"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Toalla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toalla_ducha"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Detergente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/detergente_ducha"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Pashte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pashte"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ninguno_ducha"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/acc_lava">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/LLavadero"
+                android:visibility="gone">
 
-                <RadioButton
-                    android:text="Cepilleros"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:text="Seleccione accesorios de Lavadero"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cepilleros"
-                    android:layout_weight="1"
-                    android:checked="true"/>
+                    android:id="@+id/textView6"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp" />
 
-                <RadioButton
-                    android:text="Cepillo de Dientes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/cepillo_diente"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/acc_lava">
 
-                <RadioButton
-                    android:text="Jabon de Ropa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/jabon_ropa"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Cepilleros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cepilleros"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Detergente"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/detergente_lava"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Cepillo de Dientes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cepillo_diente"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Cepillo de Ropa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/cepillo_ropa"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Jabon de Ropa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jabon_ropa"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Pasta Dental"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pasta_dental"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Detergente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/detergente_lava"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Jabon de Trastos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/jabon_trastos"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Cepillo de Ropa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cepillo_ropa"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="pasthe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pathe_lava"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Pasta Dental"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pasta_dental"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-                <RadioButton
-                    android:text="Ninguno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ninguno_lava"
-                    android:layout_weight="1"
-                    android:checked="false"/>
+                    <CheckBox
+                        android:text="Jabon de Trastos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jabon_trastos"
+                        android:layout_weight="1"
+                        android:checked="false"/>
 
-            </RadioGroup>
+                    <CheckBox
+                        android:text="pasthe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pashte_lava"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <CheckBox
+                        android:text="Ninguno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ninguno_lava"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaAccesorio"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btnAgregarAccesorios"
+                android:id="@+id/btnAgregarAccesorio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
