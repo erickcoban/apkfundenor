@@ -81,6 +81,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_masculino.setOnClickListener(list_apellidoP3);
 
         //Almacena el grado academico del participante
+        RadioButton rb_ningu = (RadioButton)findViewById(R.id.rb_ningunoGA);
         RadioButton rb_prepri = (RadioButton)findViewById(R.id.rb_preprimaria);
         RadioButton rb_prima = (RadioButton)findViewById(R.id.rb_primaria);
         RadioButton rb_basico = (RadioButton)findViewById(R.id.rb_basico);
@@ -90,6 +91,9 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             @Override
             public void onClick(View view){
                 switch (view.getId()){
+                    case R.id.rb_ningunoGA:
+                        gradoPar = "ninguno";
+                        break;
                     case R.id.rb_preprimaria:
                         gradoPar = "preprimaria";
                         break;
@@ -108,6 +112,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
                 }
             }
         };
+        rb_ningu.setOnClickListener(list_gradoAca);
         rb_prepri.setOnClickListener(list_gradoAca);
         rb_prima.setOnClickListener(list_gradoAca);
         rb_basico.setOnClickListener(list_gradoAca);
@@ -149,6 +154,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_viud.setOnClickListener(list_eCivilPar);
 
         //Almacena el Cargo Comunitario que tiene
+        RadioButton rb_ning = (RadioButton)findViewById(R.id.rb_ningunoCCP);
         RadioButton rb_coco = (RadioButton)findViewById(R.id.rb_cocode);
         RadioButton rb_comi = (RadioButton)findViewById(R.id.rb_comite);
         RadioButton rb_past = (RadioButton)findViewById(R.id.rb_pastor);
@@ -158,6 +164,9 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             @Override
             public void onClick(View view) {
                 switch(view.getId()) {
+                    case R.id.rb_ningunoCCP:
+                        cargoPar = "ninguno";
+                        break;
                     case R.id.rb_cocode:
                         cargoPar = "cocode";
                         break;
@@ -176,6 +185,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
                 }
             }
         };
+        rb_ning.setOnClickListener(list_cargoCom);
         rb_coco.setOnClickListener(list_cargoCom);
         rb_comi.setOnClickListener(list_cargoCom);
         rb_past.setOnClickListener(list_cargoCom);
@@ -208,7 +218,8 @@ public class AgregarParticipante extends Activity implements OnClickListener {
 
         //Muestra Especifique otro oficio
         final EditText otroOficio = (EditText)findViewById(R.id.otroOficio);
-        RadioButton rb_otroOficio = (RadioButton)findViewById(R.id.rb_otroOficio);
+        RadioButton rb_otroOficio = (RadioButton)findViewById(R.id.rb_otroOficioP);
+        RadioButton rb_ama_casa = (RadioButton)findViewById(R.id.rb_amaCasa);
         RadioButton rb_jornalero = (RadioButton)findViewById(R.id.rb_jornalero);
         RadioButton rb_comerciante = (RadioButton)findViewById(R.id.rb_comerciante);
         RadioButton rb_agricultor = (RadioButton)findViewById(R.id.rb_agricultor);
@@ -216,7 +227,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             @Override
             public void onClick(View view) {
                 switch(view.getId()) {
-                    case R.id.rb_otroOficio:
+                    case R.id.rb_otroOficioP:
                         otroOficio.setVisibility(View.VISIBLE);
                         oficioPar = otroO.getText().toString();
                         break;
@@ -239,6 +250,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             }
         };
         rb_otroOficio.setOnClickListener(list_otroOficio);
+        rb_ama_casa.setOnClickListener(list_otroOficio);
         rb_jornalero.setOnClickListener(list_otroOficio);
         rb_comerciante.setOnClickListener(list_otroOficio);
         rb_agricultor.setOnClickListener(list_otroOficio);
@@ -275,7 +287,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         RadioButton rb_prop = (RadioButton)findViewById(R.id.rb_propia);
         RadioButton rb_pres = (RadioButton)findViewById(R.id.rb_prestada);
         RadioButton rb_algu = (RadioButton)findViewById(R.id.rb_alquilada);
-        RadioButton rb_ning = (RadioButton)findViewById(R.id.rb_ninguna);
+        RadioButton rb_ning2 = (RadioButton)findViewById(R.id.rb_ninguna);
         View.OnClickListener list_tenenciaTP = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -298,7 +310,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_prop.setOnClickListener(list_tenenciaTP);
         rb_pres.setOnClickListener(list_tenenciaTP);
         rb_algu.setOnClickListener(list_tenenciaTP);
-        rb_ning.setOnClickListener(list_tenenciaTP);
+        rb_ning2.setOnClickListener(list_tenenciaTP);
 
         //Almacena si tiene certeza juridica
         RadioButton rb_no = (RadioButton)findViewById(R.id.rb_no);

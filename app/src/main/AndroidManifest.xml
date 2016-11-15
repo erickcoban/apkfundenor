@@ -151,6 +151,10 @@
             android:name=".form_general_alimentacion"
             android:label="@string/title_activity_form" >
         </activity>
+        <activity
+            android:name=".form_general_animales"
+            android:label="@string/title_activity_form" >
+        </activity>
 
         <!--Listado de Menus Secundarios-->
         <activity

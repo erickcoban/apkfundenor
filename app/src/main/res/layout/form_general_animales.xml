@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="20dp">
+
+    <TextView
+        android:text="Formulario de Otros Animales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Seleccione que otros animales tiene"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textStyle="normal|bold"
+                android:paddingTop="10dp"
+                android:textSize="16sp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tiene_animales">
+
+
+                <CheckBox
+                    android:text="Vacas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbVaca"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Cerdos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbCerdo"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Cabras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbCabra"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Conejos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbConejo"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:text="Palomas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbPaloma"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/noVacas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Escriba cuantas Vacas tiene"/>
+
+            <EditText
+                android:id="@+id/noCerdos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Escriba cuantos Cerdos tiene"/>
+
+            <EditText
+                android:id="@+id/noCabras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Escriba cuantas Cabras tiene"/>
+
+            <EditText
+                android:id="@+id/noConejos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Escriba cuantos Conejos tiene"/>
+
+            <EditText
+                android:id="@+id/noPalomas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Escriba cuantas Palomas tiene"/>
+
+            <TextView
+                    android:text="Condiciones del Habitat de los otros animales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tipo_concentrado">
+
+                    <RadioButton
+                        android:text="Buena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_buenaOA"
+                        android:layout_weight="1"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:text="Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_regularOA"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:text="Malo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_maloOA"
+                        android:layout_weight="1"
+                        android:checked="false"/>
+
+                </RadioGroup>
+
+
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/fechaAnimal"
+                android:layout_gravity="center_horizontal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAgregarAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:text="Agregar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

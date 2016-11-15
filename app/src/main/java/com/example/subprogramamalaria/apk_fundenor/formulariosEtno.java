@@ -77,7 +77,7 @@ public class formulariosEtno extends ActionBarActivity {
                         startActivity(i);
                         break;
                     case 5:
-                        i = new Intent(getApplicationContext(), form_general_curacion.class);
+                        i = new Intent(getApplicationContext(), form_general_animales.class);
                         //Envia el Usuario que ingresa
                         i.putExtra("idEtno",idEtno);
                         Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();

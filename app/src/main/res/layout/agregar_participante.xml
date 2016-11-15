@@ -260,7 +260,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:hint="Escriba el numero de telefono"></EditText>
+                android:hint="Escriba el numero de telefono"/>
 
             <TextView
                 android:text="Seleccione el Cargo Comunitarios"
@@ -417,7 +417,7 @@
                     android:text="Otro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rb_otroOficio"
+                    android:id="@+id/rb_otroOficioP"
                     android:layout_weight="1"
                     android:checked="false"/>
 
