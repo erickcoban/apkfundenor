@@ -401,7 +401,8 @@ public class form_general_accesorios extends Activity implements View.OnClickLis
                 dbconeccion.insertarDatos(idAmbiente, ambiente, accesoHabi, accesoCoci, accesoLetri, accesoDucha, accesoLava, fecha);
                 Intent main = new Intent(form_general_accesorios.this, formulariosAmbientes.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                //main.putExtra("idAmbiente",idAmbiente);
+                main.putExtra("idAmbiente",idAmbiente);
+                main.putExtra("ambiente",ambiente);
                 Toast.makeText(getApplicationContext(), "Elementos Guardados Correctamente ", Toast.LENGTH_SHORT).show();
                 startActivity(main);
                 break;
