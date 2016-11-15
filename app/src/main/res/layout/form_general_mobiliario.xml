@@ -33,7 +33,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cantidad_roperos">
+                android:id="@+id/tiene_roperos">
 
                 <RadioButton
                     android:text="No"
@@ -93,7 +93,7 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/noRop"
+                android:id="@+id/noCam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -111,7 +111,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cantidad_camas">
+                android:id="@+id/cantidad_camasH">
 
                 <RadioButton
                     android:text="Tapesco"
@@ -214,7 +214,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cantidad_roperos">
+                android:id="@+id/tiene_mesas">
 
                 <RadioButton
                     android:text="No"
@@ -235,7 +235,7 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/noRop"
+                android:id="@+id/noMesa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -367,14 +367,6 @@
                     android:checked="false"/>
 
                 <RadioButton
-                    android:text="Chimena"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rb_chimenea"
-                    android:layout_weight="1"
-                    android:checked="false"/>
-
-                <RadioButton
                     android:text="Tres Piedras"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -431,6 +423,13 @@
                     android:checked="false"/>
 
             </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAgregarMobiliario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Agregar Mobiliario" />
 
             </LinearLayout>
 

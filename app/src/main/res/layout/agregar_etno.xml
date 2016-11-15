@@ -5,13 +5,23 @@
     android:orientation="vertical"
     android:padding="20dp" >
 
+    <TextView
+        android:text="Formulario de Etnoveterinaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" >
+    </TextView>
+
     <EditText
-        android:id="@+id/et_miembro_id"
+        android:id="@+id/etno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="40dp"
-        android:hint="Agregue aquí la nueva familia">
+        android:hint="Agrege la Etnoveterinaria">
 
         <requestFocus />
     </EditText>
@@ -21,6 +31,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Agregar Familia" />
+        android:text="Agregar" />
 
 </LinearLayout>

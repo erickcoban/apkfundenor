@@ -27,7 +27,7 @@ public class formulariosEtno extends ActionBarActivity {
         setContentView(R.layout.formularios_etno);
 
         //Asigna el numero de la familia a la que pertenece
-        final String idFam = getIntent().getStringExtra("idHuerto");
+        final String idEtno = getIntent().getStringExtra("idEtno");
 
         //CREA LOS MENUS
         final ListView lista = (ListView) findViewById(R.id.list_formularios);
@@ -44,29 +44,29 @@ public class formulariosEtno extends ActionBarActivity {
                     case 0 :
                         Intent i = new Intent(getApplicationContext(), form_general_produccion.class);
                         //Envia el id del menu
-                        i.putExtra("idFam",idFam);
-                        Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
+                        i.putExtra("idEtno",idEtno);
+                        Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                     case 1:
                         i = new Intent(getApplicationContext(), form_general_instalaciones.class);
                         //Envia el Usuario que ingresa
-                        i.putExtra("idFam",idFam);
-                        Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
+                        i.putExtra("idEtno",idEtno);
+                        Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                     case 2:
                         i = new Intent(getApplicationContext(), form_general_huevos.class);
                         //Envia el Usuario que ingresa
-                        i.putExtra("idFam",idFam);
-                        Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
+                        i.putExtra("idEtno",idEtno);
+                        Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                     case 3:
                         i = new Intent(getApplicationContext(), form_general_curacion.class);
                         //Envia el Usuario que ingresa
-                        i.putExtra("idFam",idFam);
-                        Toast.makeText(getApplicationContext(), "envia " + idFam, Toast.LENGTH_SHORT).show();
+                        i.putExtra("idEtno",idEtno);
+                        Toast.makeText(getApplicationContext(), "envia " + idEtno, Toast.LENGTH_SHORT).show();
                         startActivity(i);
                         break;
                 }

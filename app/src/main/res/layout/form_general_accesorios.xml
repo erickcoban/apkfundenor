@@ -412,6 +412,13 @@
                     android:checked="false"/>
 
             </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAgregarAccesorios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Agregar Accesorios" />
         </LinearLayout>
     </ScrollView>
 
