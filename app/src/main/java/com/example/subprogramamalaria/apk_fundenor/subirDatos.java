@@ -1,18 +1,12 @@
 package com.example.subprogramamalaria.apk_fundenor;
 
-/**
- * Created by Subprograma Malaria on 05/11/2016.
- */
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -24,8 +18,11 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MyActivity extends ActionBarActivity {
+/**
+ * Created by Subprograma Malaria on 18/11/2016.
+ */
 
+public class subirDatos extends ActionBarActivity implements View.OnClickListener {
     Button btnAgregarMiembro;
     ListView lista;
     SQLControlador dbconeccion;
@@ -49,10 +46,10 @@ public class MyActivity extends ActionBarActivity {
         lista = (ListView) findViewById(R.id.listViewVivienda);
 
         //acción del boton agregar viviendas
-        btnAgregarMiembro.setOnClickListener(new OnClickListener() {
+        btnAgregarMiembro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iagregar = new Intent(MyActivity.this, AgregarMiembro.class);
+                Intent iagregar = new Intent(subirDatos.this, AgregarMiembro.class);
                 //envia el usuario que se logea
                 iagregar.putExtra("usuario", usuarioActual);
                 Toast.makeText(getApplicationContext(), "envia " + usuarioActual, Toast.LENGTH_SHORT).show();
@@ -103,7 +100,7 @@ public class MyActivity extends ActionBarActivity {
         lista.setAdapter(adapter);
 
         // acción cuando hacemos click en item para poder modificarlo o eliminarlo
-        lista.setOnItemClickListener(new OnItemClickListener() {
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
 
@@ -159,5 +156,19 @@ public class MyActivity extends ActionBarActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+
+    @Override
+    public void onClick(View v) {
+        /*switch (v.getId()) {
+            case R.id.btnActualizar:
+                //Variables se asignan las variables que se enviaran a la base de datos
+                String memName_upd = et.getText().toString();
+
+
+                dbconeccion.actualizarDatos(member_id, memName_upd);
+                this.returnHome();
+                break;
+        }*/
     }
 } //termina clase

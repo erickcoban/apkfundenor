@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class AgregarParticipante extends Activity implements OnClickListener {
-    EditText n1P, n2P, n3P, a1P, a2P, aCP, cuiP, otroO, otraRP, grupoP, extTP, ingresoP, telP;
+    EditText n1P, n2P, n3P, a1P, a2P, aCP, cuiP, otroO, otraRP, grupoP, extTP, ingresoP, telP, otraReligion, otroOficio;
     Button btnAgregar;
     DatePicker fechaNac, fechaRegPar;
     String generoPar, gradoPar, eCivilPar, cargoPar, idiomaPar, oficioPar, religionPar,
@@ -81,7 +81,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_masculino.setOnClickListener(list_apellidoP3);
 
         //Almacena el grado academico del participante
-        RadioButton rb_ningu = (RadioButton)findViewById(R.id.rb_ningunoGA);
+        RadioButton rb_ninguAC = (RadioButton)findViewById(R.id.rb_ningunoGAP);
         RadioButton rb_prepri = (RadioButton)findViewById(R.id.rb_preprimaria);
         RadioButton rb_prima = (RadioButton)findViewById(R.id.rb_primaria);
         RadioButton rb_basico = (RadioButton)findViewById(R.id.rb_basico);
@@ -91,7 +91,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             @Override
             public void onClick(View view){
                 switch (view.getId()){
-                    case R.id.rb_ningunoGA:
+                    case R.id.rb_ningunoGAP:
                         gradoPar = "ninguno";
                         break;
                     case R.id.rb_preprimaria:
@@ -112,7 +112,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
                 }
             }
         };
-        rb_ningu.setOnClickListener(list_gradoAca);
+        rb_ninguAC.setOnClickListener(list_gradoAca);
         rb_prepri.setOnClickListener(list_gradoAca);
         rb_prima.setOnClickListener(list_gradoAca);
         rb_basico.setOnClickListener(list_gradoAca);
@@ -217,7 +217,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_caste.setOnClickListener(list_idiomaPar);
 
         //Muestra Especifique otro oficio
-        final EditText otroOficio = (EditText)findViewById(R.id.otroOficio);
+        otroOficio = (EditText)findViewById(R.id.otroOficio);
         RadioButton rb_otroOficio = (RadioButton)findViewById(R.id.rb_otroOficioP);
         RadioButton rb_ama_casa = (RadioButton)findViewById(R.id.rb_amaCasa);
         RadioButton rb_jornalero = (RadioButton)findViewById(R.id.rb_jornalero);
@@ -228,8 +228,8 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             public void onClick(View view) {
                 switch(view.getId()) {
                     case R.id.rb_otroOficioP:
-                        otroOficio.setVisibility(View.VISIBLE);
-                        oficioPar = otroO.getText().toString();
+                        //otroOficio.setVisibility(View.VISIBLE);
+                        oficioPar = otroOficio.getText().toString();
                         break;
                     case R.id.rb_amaCasa:
                         oficioPar = "ama_de_casa";
@@ -256,7 +256,7 @@ public class AgregarParticipante extends Activity implements OnClickListener {
         rb_agricultor.setOnClickListener(list_otroOficio);
 
         //Muestra Especifique otra religión
-        final EditText otraReligion = (EditText)findViewById(R.id.otraReligion);
+        otraReligion = (EditText)findViewById(R.id.otraReligion);
         RadioButton rb_catolico = (RadioButton)findViewById(R.id.rb_catolico);
         RadioButton rb_evangelico = (RadioButton)findViewById(R.id.rb_evangelico);
         RadioButton rb_otraReligion = (RadioButton)findViewById(R.id.rb_otraReligion);
@@ -265,8 +265,8 @@ public class AgregarParticipante extends Activity implements OnClickListener {
             public void onClick(View view) {
                 switch(view.getId()) {
                     case R.id.rb_otraReligion:
-                        otraReligion.setVisibility(View.VISIBLE);
-                        religionPar = otraRP.getText().toString();
+                        //otraReligion.setVisibility(View.VISIBLE);
+                        religionPar = "otro";
                         break;
                     case R.id.rb_catolico:
                         otraReligion.setVisibility(View.GONE);

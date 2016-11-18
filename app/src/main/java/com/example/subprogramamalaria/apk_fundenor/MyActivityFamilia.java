@@ -32,6 +32,7 @@ public class MyActivityFamilia extends ActionBarActivity {
 
         //Asigna el numero de la vivienda a la que pertenece
         final String idV = getIntent().getStringExtra("idVivienda");
+        int IDV = Integer.parseInt(idV);
 
         dbconeccion = new SQLControladorFamilia(this);
         dbconeccion.abrirBaseDeDatos();
@@ -69,16 +70,23 @@ public class MyActivityFamilia extends ActionBarActivity {
         // Tomar los datos desde la base de datos para poner en el curso y después en el adapter
         Cursor cursor = dbconeccion.leerDatos();
 
-        String[] from = new String[] {
+        String[] comparador = new String[]{
                 DBhelperFamilia.FAMILIA_ID,
                 DBhelperFamilia.FAMILIA_NOMBRE,
                 DBhelperFamilia.FAMILIA_VIVIENDA
         };
-        int[] to = new int[] {
-                R.id.miembro_id,
-                R.id.miembro_nombre,
-                R.id.miembro_3
+
+        String[] from = new String[]{
+                DBhelperFamilia.FAMILIA_ID,
+                DBhelperFamilia.FAMILIA_NOMBRE,
+                DBhelperFamilia.FAMILIA_VIVIENDA
         };
+
+        int[] to = new int[]{
+                    R.id.miembro_id,
+                    R.id.miembro_nombre,
+                    R.id.miembro_3
+            };
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
                 MyActivityFamilia.this, R.layout.formato_fila, cursor, from, to);

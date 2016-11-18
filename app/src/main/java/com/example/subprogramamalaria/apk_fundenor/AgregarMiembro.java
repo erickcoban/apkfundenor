@@ -5,23 +5,50 @@ package com.example.subprogramamalaria.apk_fundenor;
  */
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //Vista de Agregar Viviendas
-public class AgregarMiembro extends Activity implements OnClickListener {
+public class AgregarMiembro extends ActionBarActivity implements OnClickListener {
     //Declaración de variables para almacenar en la base de datos
     DatePicker fechaVivienda;
     EditText numeroVivienda;
     Button btnAgregar;
     SQLControlador dbconeccion;
     String paredV, techoV, tieneD, accesoAgua, almacenAgua, tecnicaP, pisoV;
+
+    // Progress Dialog
+    private ProgressDialog pDialog;
+
+    // JSON parser class
+    JSONParser jsonParser = new JSONParser();
+
+    //testing on Emulator:
+    private static final String CREAR_CASO_URL = "http://fundenorcoban.esy.es/funsys/ingresotbvivienda.php";
+
+    //ids
+    private static final String TAG_SUCCESS = "success";
+    private static final String TAG_MESSAGE = "message";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +57,7 @@ public class AgregarMiembro extends Activity implements OnClickListener {
         setContentView(R.layout.agregar_miembro);
 
     //Asignación atributos en las variables declaradas
+
         //Almacena el numero de la vivienda
         numeroVivienda = (EditText) findViewById(R.id.et_numeroVivienda);
 
@@ -302,34 +330,108 @@ public class AgregarMiembro extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        switch (v.getId()) {
-            case R.id.btnAgregarId:
-                //Datos almacenados en SQLite
-                String numVivienda = numeroVivienda.getText().toString();
-                String idLocal = "1601";
-                String username = getIntent().getStringExtra("usuario");
-                String paredVivienda = paredV;
-                String techoVivienda = techoV;
-                String pisoVivienda = pisoV;
-                String tieneDivision = tieneD;
-                String tipoAgua = accesoAgua;
-                String tipoAlmacen = almacenAgua;
-                String tipoPur = tecnicaP;
-                String estadoAct = "ACTIVO";
-                String fecha = fechaVivienda.getYear()+"-"+(fechaVivienda.getMonth()+1)+"-"+fechaVivienda.getDayOfMonth();
 
-                //Metodo de insercción a la base de datos
-                dbconeccion.insertarDatos(numVivienda, idLocal, username, paredVivienda, techoVivienda, pisoVivienda, tieneDivision, tipoAgua, tipoAlmacen, tipoPur, estadoAct, fecha);
+        new CreateUser().execute();
+
+    }
+
+    class CreateUser extends AsyncTask<String, String, String> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(AgregarMiembro.this);
+            pDialog.setMessage("Creando Vivienda...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
+
+        @Override
+        protected String doInBackground(String... args) {
+            // TODO Auto-generated method stub
+           //switch (v.getId()) {
+                //case R.id.btnAgregarId:
+                    //Datos almacenados en SQLite
+                    int success;
+                    String numVivienda = numeroVivienda.getText().toString();
+                    String idLocal = "1610";
+                    String username = getIntent().getStringExtra("usuario");
+                    String paredVivienda = paredV;
+                    String techoVivienda = techoV;
+                    String pisoVivienda = pisoV;
+                    String tieneDivision = tieneD;
+                    String tipoAgua = accesoAgua;
+                    String tipoAlmacen = almacenAgua;
+                    String tipoPur = tecnicaP;
+                    String estadoAct = "ACTIVO";
+                    String fecha = fechaVivienda.getYear()+"-"+(fechaVivienda.getMonth()+1)+"-"+fechaVivienda.getDayOfMonth();
+
+                    //Metodo de insercción a SQLite
+                    dbconeccion.insertarDatos(numVivienda, idLocal, username, paredVivienda, techoVivienda,
+                                              pisoVivienda, tieneDivision, tipoAgua, tipoAlmacen, tipoPur, estadoAct, fecha);
+
+                    /*break;
+                default:
+                    break;
+            }*/
+
+            try {
+                //Clase para guardar datos en MySQL
+                List params = new ArrayList();
+                //params.add(new BasicNameValuePair("numVivienda", numVivienda));
+                params.add(new BasicNameValuePair("idLocalidad", idLocal));
+                params.add(new BasicNameValuePair("tecnico",username));
+                params.add(new BasicNameValuePair("tipoPared",paredVivienda));
+                params.add(new BasicNameValuePair("tipoTecho",techoVivienda));
+                params.add(new BasicNameValuePair("tipoPiso",pisoVivienda));
+                params.add(new BasicNameValuePair("divisiones",tieneDivision));
+                params.add(new BasicNameValuePair("accesoAgua", tipoAgua));
+                params.add(new BasicNameValuePair("almacenAgua",tipoAlmacen));
+                params.add(new BasicNameValuePair("purificacionAgua",tipoPur));
+                params.add(new BasicNameValuePair("estadoAsignacion",estadoAct));
+                params.add(new BasicNameValuePair("fecha",fecha));
+
+                Log.d("request!", "starting");
+
+                //Posting user data to script
+                JSONObject json = jsonParser.makeHttpRequest(
+                        CREAR_CASO_URL, "POST", params);
+
+                // full json response
+                Log.d("Creando Vivienda", json.toString());
+
+                // json success element
+                success = json.getInt(TAG_SUCCESS);
+                if (success == 1) {
+                    Log.d("Vivienda Creado!", json.toString());
+                    finish();
+                    return json.getString(TAG_MESSAGE);
+                }else{
+                    Log.d("Creacion Erronea!", json.getString(TAG_MESSAGE));
+                    return json.getString(TAG_MESSAGE);
+
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+
+        }
+
+        protected void onPostExecute(String file_url) {
+            // dismiss the dialog once product deleted
+            pDialog.dismiss();
+            if (file_url != null){
+                Toast.makeText(AgregarMiembro.this, file_url, Toast.LENGTH_LONG).show();
 
                 //Acción en la que se almacenan los valores y reenvia al formulario de ambiente, mobiliario y accesorios
                 Intent main = new Intent(AgregarMiembro.this, MyActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                main.putExtra("usuario", username);
+                main.putExtra("usuario", getIntent().getStringExtra("usuario"));
                 startActivity(main);
-                break;
-
-            default:
-                break;
+            }
         }
     }
 }

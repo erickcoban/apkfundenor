@@ -99,7 +99,10 @@ public class MyActivityParticipante extends ActionBarActivity {
                 R.id.miembro_18,
                 R.id.miembro_19,
                 R.id.miembro_20,
-                R.id.miembro_21
+                R.id.miembro_21,
+                R.id.miembro_22,
+                R.id.miembro_23,
+                R.id.miembro_24
 
         };
 
